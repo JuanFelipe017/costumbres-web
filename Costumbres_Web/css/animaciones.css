@@ -270,6 +270,38 @@
     animation: fab-entra 400ms var(--ease-out) 600ms backwards;
 }
 
+/* ---------- Visor de fotos: entra con un leve acercamiento, cambia de foto con fundido ---------- */
+dialog.visor .visor-figura {
+    transition:
+        opacity var(--dur-menu) var(--ease-out),
+        transform var(--dur-menu) var(--ease-out);
+}
+
+@starting-style {
+    dialog.visor[open] .visor-figura {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+}
+
+dialog.visor::backdrop {
+    transition: opacity var(--dur-menu) var(--ease-out);
+}
+
+@starting-style {
+    dialog.visor[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+.visor-img {
+    transition: opacity var(--dur-fast) var(--ease-in-out);
+}
+
+.visor-img.is-cambiando {
+    opacity: 0;
+}
+
 /* ---------- Reducir movimiento: todo en su lugar, sin transiciones ---------- */
 @media (prefers-reduced-motion: reduce) {
     @view-transition {
@@ -283,6 +315,9 @@
     }
 
     #mobile-menu,
+    dialog.visor .visor-figura,
+    dialog.visor::backdrop,
+    .visor-img,
     .overlay-anim::after,
     .ring-anim::before,
     .site-nav::before,

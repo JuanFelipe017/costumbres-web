@@ -21,13 +21,14 @@
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Bricolage+Grotesque:wght@600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=arrow_forward,chat,close,eco,energy_savings_leaf,expand_more,format_quote,location_on,mail,map,menu,open_in_new,pause,play_arrow,schedule,verified&amp;display=block"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=arrow_forward,chat,chevron_left,chevron_right,close,eco,energy_savings_leaf,expand_more,format_quote,location_on,mail,map,menu,open_in_new,pause,play_arrow,schedule,verified,zoom_in&amp;display=block"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="../js/tailwind-config.js"></script>
     <script src="../js/animaciones.js"></script>
     <link href="../css/base.css" rel="stylesheet" />
     <link href="../css/historia.css" rel="stylesheet" />
+    <link href="../css/visor.css" rel="stylesheet" />
     <link href="../css/animaciones.css" rel="stylesheet" />
 </head>
 
@@ -142,7 +143,7 @@
                     </div>
                 </div>
                 <div class="md:col-span-7 order-1 md:order-2 relative">
-                    <div class="aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden shadow-sm">
+                    <div class="aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden shadow-sm" data-visor>
                         <img class="w-full h-full object-cover" alt="Hand-painted decorative handcrafted masks"
                             src="../img/artesanias/f137.jpg" loading="lazy" decoding="async" />
                     </div>
@@ -193,15 +194,15 @@
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">In the heart of Bogotá's historic center, every display case tells a different story.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" data-anim="stagger">
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim" data-visor="local">
                     <img class="w-full h-full object-cover"
                         alt="Jewelry and handcraft display case at the Costumbres store" src="../img/local/f02.jpg" loading="lazy" decoding="async" />
                 </div>
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim" data-visor="local">
                     <img class="w-full h-full object-cover"
                         alt="Bags, hats and handcrafts displayed at the store entrance" src="../img/local/f04.jpg" loading="lazy" decoding="async" />
                 </div>
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim" data-visor="local">
                     <img class="w-full h-full object-cover"
                         alt="Colonial facade of the Casona del Museo in Bogotá's historic center" src="../img/local/f03.jpg" loading="lazy" decoding="async" />
                 </div>
@@ -272,6 +273,7 @@
     </a>
     </footer>
     <script src="../js/nav.js"></script>
+    <script src="../js/visor.js"></script>
 </body>
 
 </html>

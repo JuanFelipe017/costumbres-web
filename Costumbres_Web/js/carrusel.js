@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             capaEntrante.removeAttribute('aria-hidden');
             capaSaliente.setAttribute('aria-hidden', 'true');
             capaActiva = capaActiva === 0 ? 1 : 0;
+            container.dataset.index = String(indiceActual);
 
             setTimeout(() => {
                 capaSaliente.classList.remove('opacity-100');

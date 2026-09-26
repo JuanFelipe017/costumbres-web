@@ -1,0 +1,133 @@
+/* Visor de fotos (js/visor.js). Colores de la paleta: surface #fdf9f4, on-surface #1c1c19,
+   inverse-on-surface #f1f0ea. El movimiento está en css/animaciones.css. */
+
+.visor-disparador {
+    cursor: zoom-in;
+}
+
+dialog.visor {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+dialog.visor[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog.visor::backdrop {
+    background: rgba(28, 28, 25, 0.9);
+}
+
+html:has(dialog.visor[open]) {
+    overflow: hidden;
+}
+
+.visor-figura {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: min(92vw, 1100px);
+}
+
+.visor-img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.visor-pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1rem;
+    padding: 0 1rem;
+    color: #f1f0ea;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.visor-contador {
+    opacity: 0.85;
+    font-variant-numeric: tabular-nums;
+}
+
+.visor-btn {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(253, 249, 244, 0.92);
+    color: #1c1c19;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.visor-btn:hover {
+    background: #fdf9f4;
+}
+
+.visor-btn[hidden] {
+    display: none;
+}
+
+.visor-cerrar {
+    top: max(1rem, env(safe-area-inset-top));
+    right: 1rem;
+}
+
+.visor-anterior,
+.visor-siguiente {
+    top: 50%;
+    margin-top: -1.5rem;
+}
+
+.visor-anterior {
+    left: 1rem;
+}
+
+.visor-siguiente {
+    right: 1rem;
+}
+
+/* En celular las flechas bajan para no tapar la foto */
+@media (max-width: 767px) {
+    .visor-anterior,
+    .visor-siguiente {
+        top: auto;
+        margin-top: 0;
+        bottom: max(1.5rem, env(safe-area-inset-bottom));
+    }
+
+    .visor-anterior {
+        left: calc(50% - 3.5rem);
+    }
+
+    .visor-siguiente {
+        right: calc(50% - 3.5rem);
+    }
+
+    .visor-img {
+        max-height: 70vh;
+    }
+}
