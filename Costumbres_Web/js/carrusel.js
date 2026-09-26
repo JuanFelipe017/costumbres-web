@@ -2,6 +2,7 @@
 // No arranca solo si el usuario pidió reducir movimiento, y solo avanza mientras la tarjeta está en pantalla.
 document.addEventListener('DOMContentLoaded', () => {
     const INTERVALO_MS = 3500; // cada cuánto cambia de foto
+    const FUNDIDO_MS = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--dur-slow'), 10) || 700;
     const reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const en = document.documentElement.lang === 'en';
     const TXT = en
@@ -60,15 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
             capaEntrante.loading = 'eager';
             capaEntrante.src = imagenes[indiceActual];
             try { await capaEntrante.decode(); } catch (e) { /* si falla, igual se muestra */ }
-            cambiando = false;
+            // La foto nueva se funde ENCIMA de la anterior; la anterior se retira cuando ya está tapada,
+            // así nunca se ve el fondo a medias.
+            capaEntrante.classList.add('is-front');
+            capaSaliente.classList.remove('is-front');
             capaEntrante.classList.remove('opacity-0');
             capaEntrante.classList.add('opacity-100');
             capaEntrante.removeAttribute('aria-hidden');
-            capaSaliente.classList.remove('opacity-100');
-            capaSaliente.classList.add('opacity-0');
             capaSaliente.setAttribute('aria-hidden', 'true');
-
             capaActiva = capaActiva === 0 ? 1 : 0;
+
+            setTimeout(() => {
+                capaSaliente.classList.remove('opacity-100');
+                capaSaliente.classList.add('opacity-0');
+                cambiando = false;
+            }, FUNDIDO_MS);
         }, INTERVALO_MS);
     });
 });

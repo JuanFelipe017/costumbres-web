@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.setAttribute('aria-expanded', String(open));
             menuToggle.setAttribute('aria-label', open ? menuToggle.dataset.labelClose : menuToggle.dataset.labelOpen);
             icono.textContent = open ? 'close' : 'menu';
+            // Reinicia el fundido del ícono (definido en css/animaciones.css)
+            icono.classList.remove('icon-swap');
+            void icono.offsetWidth;
+            icono.classList.add('icon-swap');
         };
         menuToggle.addEventListener('click', () => setOpen(menuToggle.getAttribute('aria-expanded') !== 'true'));
         // Esc cierra el menu y devuelve el foco al boton
@@ -19,13 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuToggle.focus();
             }
         });
-    }
-
-    // Sombra sutil en el nav al hacer scroll (no le cambia el alto, para que no se vea "pegado")
-    const siteNav = document.querySelector('nav.site-nav');
-    if (siteNav) {
-        window.addEventListener('scroll', () => {
-            siteNav.classList.toggle('shadow-md', window.scrollY > 20);
-        }, { passive: true });
     }
 });

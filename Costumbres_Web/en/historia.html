@@ -25,8 +25,10 @@
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="../js/tailwind-config.js"></script>
+    <script src="../js/animaciones.js"></script>
     <link href="../css/base.css" rel="stylesheet" />
     <link href="../css/historia.css" rel="stylesheet" />
+    <link href="../css/animaciones.css" rel="stylesheet" />
 </head>
 
 <body
@@ -35,7 +37,7 @@
         class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-surface focus:text-on-primary-fixed-variant focus:px-5 focus:py-3 focus:rounded-full focus:shadow-md font-label-md text-label-md">Skip to content</a>
     <!-- TopNavBar -->
     <nav aria-label="Main"
-        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
         <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
             <a href="index.html" aria-label="Costumbres, home" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
@@ -93,7 +95,7 @@
                     class="w-full h-full object-cover object-center contrast-110 saturate-110 brightness-105" />
                 <div class="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.7)_0%,_transparent_70%)]"></div>
             </div>
-            <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <div class="relative z-10 max-w-3xl mx-auto text-center" data-anim="hero">
                 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight mb-6 drop-shadow-sm">
                     Weaving the soul of Colombia
                 </h1>
@@ -144,7 +146,7 @@
                         <img class="w-full h-full object-cover" alt="Hand-painted decorative handcrafted masks"
                             src="../img/artesanias/f137.jpg" loading="lazy" decoding="async" />
                     </div>
-                    <div class="absolute -bottom-10 -left-10 w-48 h-48 hidden md:block animate-float">
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 hidden md:block">
                         <img class="w-full h-full object-cover rounded-full border-8 border-background shadow-lg"
                             alt="Handcrafted board games" src="../img/artesanias/f117.jpg" loading="lazy" decoding="async" />
                     </div>
@@ -152,31 +154,31 @@
             </div>
         </section>
         <!-- Lo que tejemos: enlaces a cada categoría -->
-        <section class="py-20 bg-surface-container-high/30" data-reveal>
-            <div class="px-margin-mobile md:px-margin-desktop text-center mb-16">
+        <section class="py-20 bg-surface-container-high/30">
+            <div class="px-margin-mobile md:px-margin-desktop text-center mb-16" data-reveal>
                 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">What We Weave and Forge</h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Four families of products, all handmade, all with the same care.</p>
             </div>
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="relative rounded-3xl overflow-hidden bg-surface-container flex items-center justify-center p-4 md:p-8">
-                    <div class="relative z-10 w-full grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="relative z-10 w-full grid grid-cols-2 md:grid-cols-4 gap-4" data-anim="stagger">
                         <a href="categorias.html#chaquira"
-                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group">
+                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group lift-anim">
                             <span class="font-headline-md text-headline-md text-primary">Beadwork</span>
                             <span class="text-label-md font-label-md text-on-surface-variant group-hover:text-on-primary-fixed-variant group-hover:underline underline-offset-4 transition-colors">Necklaces & earrings</span>
                         </a>
                         <a href="categorias.html#fibra"
-                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group">
+                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group lift-anim">
                             <span class="font-headline-md text-headline-md text-primary">Fiber Weaving</span>
                             <span class="text-label-md font-label-md text-on-surface-variant group-hover:text-on-primary-fixed-variant group-hover:underline underline-offset-4 transition-colors">Bracelets & basketry</span>
                         </a>
                         <a href="categorias.html#joyeria"
-                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group">
+                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group lift-anim">
                             <span class="font-headline-md text-headline-md text-primary">Jewelry</span>
                             <span class="text-label-md font-label-md text-on-surface-variant group-hover:text-on-primary-fixed-variant group-hover:underline underline-offset-4 transition-colors">Silver & gold</span>
                         </a>
                         <a href="categorias.html#decoracion"
-                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group">
+                            class="flex flex-col items-center justify-center text-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-colors group lift-anim">
                             <span class="font-headline-md text-headline-md text-primary">Decorative Art</span>
                             <span class="text-label-md font-label-md text-on-surface-variant group-hover:text-on-primary-fixed-variant group-hover:underline underline-offset-4 transition-colors">For the home</span>
                         </a>
@@ -185,22 +187,22 @@
             </div>
         </section>
         <!-- Nuestro Local: fotos reales del showroom -->
-        <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" data-reveal>
-            <div class="text-center mb-12">
+        <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-12" data-reveal>
                 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Visit Our Store</h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">In the heart of Bogotá's historic center, every display case tells a different story.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
-                    <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" data-anim="stagger">
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                    <img class="w-full h-full object-cover"
                         alt="Jewelry and handcraft display case at the Costumbres store" src="../img/local/f02.jpg" loading="lazy" decoding="async" />
                 </div>
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
-                    <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                    <img class="w-full h-full object-cover"
                         alt="Bags, hats and handcrafts displayed at the store entrance" src="../img/local/f04.jpg" loading="lazy" decoding="async" />
                 </div>
-                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
-                    <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] zoom-anim">
+                    <img class="w-full h-full object-cover"
                         alt="Colonial facade of the Casona del Museo in Bogotá's historic center" src="../img/local/f03.jpg" loading="lazy" decoding="async" />
                 </div>
             </div>
@@ -265,7 +267,6 @@
         </div>
     </footer>
     <script src="../js/nav.js"></script>
-    <script src="../js/reveal.js"></script>
 </body>
 
 </html>

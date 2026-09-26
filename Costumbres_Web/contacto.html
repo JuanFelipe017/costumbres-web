@@ -25,8 +25,10 @@
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
+    <script src="js/animaciones.js"></script>
     <link href="css/base.css" rel="stylesheet" />
     <link href="css/contacto.css" rel="stylesheet" />
+    <link href="css/animaciones.css" rel="stylesheet" />
 </head>
 
 <body
@@ -35,7 +37,7 @@
         class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-surface focus:text-on-primary-fixed-variant focus:px-5 focus:py-3 focus:rounded-full focus:shadow-md font-label-md text-label-md">Saltar al contenido</a>
     <!-- TopNavBar -->
     <nav aria-label="Principal"
-        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
         <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
             <a href="index.html" aria-label="Costumbres, inicio" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
@@ -85,7 +87,7 @@
         </div>
     </nav>
     <main id="contenido" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 pt-32">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter" data-anim="stagger">
             <!-- Columna izquierda: canales de contacto -->
             <section class="lg:col-span-7 space-y-12">
                 <div>
@@ -97,7 +99,7 @@
                 <div class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Tengo%20una%20consulta." target="_blank" rel="noopener"
-                            class="flex flex-col items-start gap-4 bg-primary text-on-primary-fixed p-8 rounded-xl hover:brightness-110 transition-all active:scale-95 duration-200">
+                            class="flex flex-col items-start gap-4 bg-primary text-on-primary-fixed p-8 rounded-xl lift-anim overlay-anim overlay-anim--claro">
                             <span class="material-symbols-outlined text-4xl" aria-hidden="true">chat</span>
                             <div>
                                 <p class="font-headline-md text-headline-md">WhatsApp</p>
@@ -105,7 +107,7 @@
                             </div>
                         </a>
                         <a href="mailto:costumbres.co@hotmail.com"
-                            class="flex flex-col items-start gap-4 bg-surface-container-low border border-primary/10 p-8 rounded-xl hover:bg-surface-container transition-all active:scale-95 duration-200">
+                            class="flex flex-col items-start gap-4 bg-surface-container-low border border-primary/10 p-8 rounded-xl lift-anim overlay-anim">
                             <span class="material-symbols-outlined text-4xl text-primary" aria-hidden="true">mail</span>
                             <div class="min-w-0">
                                 <p class="font-headline-md text-headline-md text-on-surface">Correo</p>
@@ -125,9 +127,9 @@
                         <span class="material-symbols-outlined text-on-primary-fixed-variant text-5xl" aria-hidden="true">map</span>
                         <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Al cargar el mapa, Google puede usar cookies. <a class="underline underline-offset-4" href="privacidad.html#cookies">Más información</a></p>
                         <div class="flex flex-wrap gap-3 justify-center">
-                            <button type="button" class="map-load bg-primary text-on-primary-fixed px-6 py-3 rounded-full font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all">Cargar mapa</button>
+                            <button type="button" class="map-load bg-primary text-on-primary-fixed px-6 py-3 rounded-full font-label-md text-label-md press-anim overlay-anim overlay-anim--claro">Cargar mapa</button>
                             <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+16+%235-24+Local+11%2C+Bogot%C3%A1%2C+Colombia" target="_blank" rel="noopener"
-                                class="border-2 border-primary text-on-primary-fixed-variant px-6 py-3 rounded-full font-label-md text-label-md hover:bg-primary/10 transition-all inline-flex items-center gap-2">Abrir en Google Maps
+                                class="border-2 border-primary text-on-primary-fixed-variant px-6 py-3 rounded-full font-label-md text-label-md inline-flex items-center gap-2 press-anim overlay-anim">Abrir en Google Maps
                                 <span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span></a>
                         </div>
                     </div>
@@ -154,18 +156,18 @@
         <!-- FAQ -->
         <section class="mt-20">
             <div class="max-w-4xl mx-auto">
-                <h2 class="font-headline-lg text-headline-lg text-primary mb-3">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-3" data-reveal>
                     Preguntas Frecuentes
                 </h2>
-                <p class="text-on-surface-variant mb-8">
+                <p class="text-on-surface-variant mb-8" data-reveal>
                     Resolvemos las dudas más comunes para que disfrutes al máximo de nuestras artesanías.
                 </p>
-                <div class="space-y-4">
+                <div class="space-y-4" data-anim="stagger">
                     <details class="group bg-surface-container-low rounded-xl border border-primary/10">
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Cómo puedo comprar?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Escríbenos por WhatsApp con la pieza que te interesa. Antes de que pagues te confirmamos disponibilidad, precio total en pesos colombianos y las opciones de pago y entrega. También puedes comprar directamente en nuestra tienda.</p>
                     </details>
@@ -173,7 +175,7 @@
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Todas las artesanías son hechas a mano?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Sí. Todas nuestras piezas son elaboradas por artesanos colombianos utilizando técnicas tradicionales transmitidas de generación en generación.</p>
                     </details>
@@ -181,7 +183,7 @@
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Cómo debo cuidar mi artesanía?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Recomendamos evitar la humedad, la exposición prolongada al sol y el contacto con productos químicos para conservar su belleza y durabilidad.</p>
                     </details>
@@ -189,7 +191,7 @@
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Puedo reservar una artesanía antes de visitar la tienda?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Claro. Escríbenos por WhatsApp y verificaremos la disponibilidad de la pieza que buscas antes de tu visita.</p>
                     </details>
@@ -197,7 +199,7 @@
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Las artesanías tienen garantía?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Sí. Nuestros productos tienen garantía de un (1) año por defectos de fabricación, contado desde la fecha de compra. Consulta las condiciones en la sección de garantía más abajo o en nuestros <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="terminos.html#garantia">términos y condiciones</a>.</p>
                     </details>
@@ -205,7 +207,7 @@
                         <summary
                             class="flex justify-between items-center gap-4 cursor-pointer list-none p-5 font-body-lg text-body-lg text-on-surface">
                             ¿Puedo cambiar o devolver una pieza?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 shrink-0" aria-hidden="true">expand_more</span>
                         </summary>
                         <p class="px-5 pb-5 text-on-surface-variant leading-relaxed">Si compraste a distancia (por WhatsApp o correo), tienes derecho de retracto dentro de los cinco (5) días hábiles siguientes a la entrega, según la ley colombiana. Consulta el procedimiento en nuestros <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="terminos.html#retracto">términos y condiciones</a>.</p>
                     </details>
@@ -213,7 +215,7 @@
             </div>
         </section>
         <!-- Garantía -->
-        <section class="mt-16" id="garantia">
+        <section class="mt-16" id="garantia" data-reveal>
             <div
                 class="bg-surface-container rounded-2xl border border-primary/10 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div>
@@ -226,7 +228,7 @@
                     </p>
                 </div>
                 <button type="button" data-open-garantia
-                    class="bg-primary text-on-primary-fixed font-label-md text-label-md px-6 py-3 rounded-full hover:brightness-110 transition whitespace-nowrap">
+                    class="bg-primary text-on-primary-fixed font-label-md text-label-md px-6 py-3 rounded-full whitespace-nowrap press-anim overlay-anim overlay-anim--claro">
                     Ver garantía
                 </button>
             </div>
@@ -246,9 +248,9 @@
                 </div>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="terminos.html#garantia"
-                        class="bg-primary text-on-primary-fixed px-6 py-3 rounded-full font-label-md text-label-md hover:brightness-110 transition-all">Ver términos completos</a>
+                        class="bg-primary text-on-primary-fixed px-6 py-3 rounded-full font-label-md text-label-md press-anim overlay-anim overlay-anim--claro">Ver términos completos</a>
                     <a href="img/garantia.jpg" target="_blank" rel="noopener"
-                        class="border-2 border-primary text-on-primary-fixed-variant px-6 py-3 rounded-full font-label-md text-label-md hover:bg-primary/10 transition-all inline-flex items-center gap-2">Ver certificado original
+                        class="border-2 border-primary text-on-primary-fixed-variant px-6 py-3 rounded-full font-label-md text-label-md inline-flex items-center gap-2 press-anim overlay-anim">Ver certificado original
                         <span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span></a>
                 </div>
             </div>

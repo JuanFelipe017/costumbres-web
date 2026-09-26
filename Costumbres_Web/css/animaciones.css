@@ -1,0 +1,288 @@
+/* Animaciones compartidas de Costumbres.
+   Solo se anima transform y opacity. Duraciones entre 150 y 700 ms.
+   Con prefers-reduced-motion todo aparece en su lugar, sin movimiento. */
+
+:root {
+    /* Curvas: entrar desacelera (se "posa"), salir acelera, fundido simétrico */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+
+    --dur-press: 150ms;
+    --dur-fast: 200ms;
+    --dur-menu: 250ms;
+    --dur-base: 300ms;
+    --dur-page-in: 350ms;
+    --dur-reveal: 600ms;
+    --dur-slow: 700ms;
+
+    --reveal-y: 16px;
+}
+
+/* ---------- 1. Hero: entrada escalonada al cargar ---------- */
+@keyframes subir-entrar {
+    from {
+        opacity: 0;
+        transform: translateY(var(--reveal-y));
+    }
+}
+
+[data-anim="hero"] > * {
+    animation: subir-entrar var(--dur-slow) var(--ease-out) both;
+}
+
+[data-anim="hero"] > :nth-child(2) { animation-delay: 100ms; }
+[data-anim="hero"] > :nth-child(3) { animation-delay: 200ms; }
+[data-anim="hero"] > :nth-child(4) { animation-delay: 300ms; }
+
+/* ---------- 2. Aparición al hacer scroll (una sola vez) ----------
+   js/animaciones.js pone <html class="anim"> solo si puede animar;
+   sin JS o con reduced-motion, nada se oculta. */
+.anim [data-reveal]:not(.anim-done),
+.anim [data-anim="stagger"] > :not(.anim-done) {
+    opacity: 0;
+    transform: translateY(var(--reveal-y));
+    transition:
+        opacity var(--dur-reveal) var(--ease-out),
+        transform var(--dur-reveal) var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.anim [data-reveal].is-visible:not(.anim-done),
+.anim [data-anim="stagger"] > .is-visible:not(.anim-done) {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- 3. Hover en tarjetas y botones ---------- */
+@media (prefers-reduced-motion: no-preference) {
+    /* Tarjeta que se eleva */
+    .lift-anim {
+        transition: transform var(--dur-base) var(--ease-out);
+    }
+
+    .lift-anim:active {
+        transform: scale(0.98);
+        transition-duration: var(--dur-press);
+    }
+
+    /* Foto que se acerca dentro de su marco */
+    .zoom-anim img {
+        transition: transform var(--dur-reveal) var(--ease-out);
+    }
+
+    /* Botón que se hunde al presionar */
+    .press-anim {
+        transition: transform var(--dur-press) var(--ease-out);
+    }
+
+    .press-anim:active {
+        transform: scale(0.97);
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .lift-anim:hover,
+    .lift-anim:focus-visible {
+        transform: translateY(-4px);
+    }
+
+    .zoom-anim:hover img,
+    .zoom-anim:focus-visible img {
+        transform: scale(1.04);
+    }
+}
+
+/* Capa de brillo en hover (reemplaza los cambios de brightness/fondo) */
+.overlay-anim {
+    position: relative;
+    isolation: isolate;
+}
+
+.overlay-anim::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.overlay-anim--claro::after {
+    background: #ffffff;
+}
+
+@media (hover: hover) {
+    .overlay-anim:hover::after {
+        opacity: 0.08;
+    }
+
+    .overlay-anim--claro:hover::after {
+        opacity: 0.15;
+    }
+}
+
+/* Borde verde que aparece en las tarjetas de categoría (sin animar box-shadow) */
+.ring-anim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 2px rgba(109, 151, 115, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+    .ring-anim:hover::before {
+        opacity: 1;
+    }
+}
+
+.ring-anim:focus-visible::before {
+    opacity: 1;
+}
+
+/* ---------- 4a. Nav: sombra y fondo al hacer scroll ---------- */
+.site-nav::before,
+.site-nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.site-nav::before {
+    background: #fdf9f4;
+}
+
+.site-nav::after {
+    box-shadow: 0 8px 24px -12px rgba(28, 28, 25, 0.25);
+}
+
+.site-nav.is-scrolled::before {
+    opacity: 0.6;
+}
+
+.site-nav.is-scrolled::after {
+    opacity: 1;
+}
+
+/* ---------- 4b. Menú móvil: abre en 250 ms, cierra en 200 ms ---------- */
+#mobile-menu {
+    transition:
+        opacity var(--dur-fast) var(--ease-in),
+        transform var(--dur-fast) var(--ease-in),
+        display var(--dur-fast) allow-discrete;
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+#mobile-menu.flex {
+    opacity: 1;
+    transform: none;
+    transition-duration: var(--dur-menu);
+    transition-timing-function: var(--ease-out);
+}
+
+@starting-style {
+    #mobile-menu.flex {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes icono-entra {
+    from {
+        opacity: 0;
+        transform: rotate(-90deg) scale(0.8);
+    }
+}
+
+.icon-swap {
+    animation: icono-entra var(--dur-fast) var(--ease-out);
+}
+
+/* ---------- 5. Transición entre páginas (View Transitions, mismo sitio) ---------- */
+@view-transition {
+    navigation: auto;
+}
+
+.site-nav {
+    view-transition-name: site-nav;
+}
+
+@keyframes vt-salir {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes vt-entrar {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+::view-transition-old(root) {
+    animation: vt-salir var(--dur-fast) var(--ease-in) both;
+}
+
+::view-transition-new(root) {
+    animation: vt-entrar var(--dur-page-in) var(--ease-out) both;
+}
+
+::view-transition-group(site-nav) {
+    animation-duration: var(--dur-fast);
+}
+
+/* ---------- 6. Carruseles: fundido encadenado ---------- */
+[data-carousel] .carousel-img {
+    transition: opacity var(--dur-slow) var(--ease-in-out);
+}
+
+[data-carousel] .carousel-img.is-front {
+    z-index: 1;
+}
+
+/* ---------- Reducir movimiento: todo en su lugar, sin transiciones ---------- */
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+
+    [data-anim="hero"] > *,
+    .icon-swap {
+        animation: none;
+    }
+
+    #mobile-menu,
+    .overlay-anim::after,
+    .ring-anim::before,
+    .site-nav::before,
+    .site-nav::after,
+    [data-carousel] .carousel-img {
+        transition: none;
+    }
+}
+
+/* Al imprimir, mostrar todo */
+@media print {
+    .anim [data-reveal],
+    .anim [data-anim="stagger"] > * {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
