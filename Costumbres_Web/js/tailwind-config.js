@@ -49,7 +49,8 @@ tailwind.config = {
                 "surface-container-highest": "#a6d8a9",
                 "secondary": "#275667",
                 "on-error": "#ffffff",
-                "tertiary-container": "#dae9e3"
+                "tertiary-container": "#dae9e3",
+                "whatsapp": "#25D366"
             },
             "borderRadius": {
                 "DEFAULT": "0.25rem",

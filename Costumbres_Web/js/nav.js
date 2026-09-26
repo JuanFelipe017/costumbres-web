@@ -1,13 +1,23 @@
-// Menu movil (hamburguesa) - compartido por las 4 paginas
+// Menu movil (hamburguesa) - compartido por todas las paginas
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('flex');
-            mobileMenu.classList.toggle('hidden', isOpen);
-            mobileMenu.classList.toggle('flex', !isOpen);
-            menuToggle.querySelector('.material-symbols-outlined').textContent = isOpen ? 'menu' : 'close';
+        const icono = menuToggle.querySelector('.material-symbols-outlined');
+        const setOpen = (open) => {
+            mobileMenu.classList.toggle('hidden', !open);
+            mobileMenu.classList.toggle('flex', open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? menuToggle.dataset.labelClose : menuToggle.dataset.labelOpen);
+            icono.textContent = open ? 'close' : 'menu';
+        };
+        menuToggle.addEventListener('click', () => setOpen(menuToggle.getAttribute('aria-expanded') !== 'true'));
+        // Esc cierra el menu y devuelve el foco al boton
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                setOpen(false);
+                menuToggle.focus();
+            }
         });
     }
 
@@ -16,6 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (siteNav) {
         window.addEventListener('scroll', () => {
             siteNav.classList.toggle('shadow-md', window.scrollY > 20);
-        });
+        }, { passive: true });
     }
 });

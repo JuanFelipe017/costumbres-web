@@ -1,12 +1,3 @@
-.weave-pattern {
-    background-color: #fdf9f4;
-    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-}
-
-.organic-clip {
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-}
-
 .text-balance {
     text-wrap: balance;
 }

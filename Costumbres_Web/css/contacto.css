@@ -1,3 +1,10 @@
-.soft-pressed {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+/* Modal de garantía (<dialog> nativo) */
+.garantia-dialog {
+    width: min(42rem, calc(100% - 2rem));
+    max-height: 90vh;
+    padding: 0;
+}
+
+.garantia-dialog::backdrop {
+    background: rgba(28, 28, 25, 0.6);
 }

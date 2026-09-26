@@ -6,14 +6,16 @@ Sitio de **Costumbres, joyería y artesanía colombiana**. Sitio estático bilin
 - HTML estático + **Tailwind vía CDN** (`cdn.tailwindcss.com`, plugins forms y container-queries).
 - Tokens de diseño en `Costumbres_Web/js/tailwind-config.js` (colores estilo Material 3: `primary` #6d9773, `secondary` #275667, `background` #fdf9f4; fuentes **Bricolage Grotesque** para títulos y **Be Vietnam Pro** para texto; espaciados `margin-desktop`, `margin-mobile`, `gutter`, `container-max`).
 - CSS mínimo por página en `css/` (`base.css` es compartido; incluye `.organic-texture`).
-- JS vanilla en `js/`: `nav.js` (menú móvil, compartido), `carrusel.js` (carrusel automático con `[data-carousel]`), un JS por página.
+- JS vanilla en `js/`: `nav.js` (menú móvil accesible, compartido), `carrusel.js` (carrusel con botón de pausa, `[data-carousel]`), `mapa.js` (Google Maps solo al pulsar «Cargar mapa»), `reveal.js` (aparición suave `[data-reveal]`, respeta reduced-motion), `contacto.js` (modal de garantía con `<dialog>`).
+- Contraste AA: para texto verde pequeño usar `text-on-primary-fixed-variant`; sobre botones `bg-primary` usar `text-on-primary-fixed`. `primary` como color de texto solo en títulos grandes sobre fondo claro.
 - Íconos: Material Symbols Outlined (Google Fonts). Banderas desde flagcdn.com.
 
 ## Estructura
 ```
 Costumbres_Web/
   index.html  categorias.html  historia.html  contacto.html   ← español
-  en/ (mismas 4 páginas)                                     ← inglés
+  privacidad.html  terminos.html                             ← legales (datos, cookies, garantía, retracto)
+  en/ (mismas 6 páginas)                                     ← inglés
   css/  js/  img/{hero,artesanias,joyas,local,logos}
 ```
 
@@ -32,10 +34,9 @@ cd Costumbres_Web && python -m http.server 8000
 - No agregar frameworks ni un paso de build salvo que se pida.
 
 ## Puntos conocidos a revisar
-- `img/logos/icono.png` pesa ~1.4 MB y se muestra a 48 px de alto en el nav.
-- Imágenes hero de 0.8–1.2 MB y `garantia-en.jpg` de 1.4 MB (vs 190 KB la versión ES); sin `loading="lazy"` / WebP.
+- Datos del negocio pendientes (WhatsApp, razón social, NIT, dirección/horario a confirmar): ver `Costumbres_Web/README.md`.
+- Fotos de producto y hero sin comprimir ni WebP (el cliente pidió no tocar las fotos); ya tienen `loading="lazy"`. Los logos usan copias livianas (`icono-96/192.png`, `logo-320.png`).
 - Tailwind Play CDN no está pensado para producción (compila en el navegador).
-- `README.md` vacío.
 
 ## Skills disponibles en `.claude/skills/`
 - `ui-ux-pro-max` — sistema de diseño, paletas, tipografía, reglas UX y accesibilidad (base de datos local).

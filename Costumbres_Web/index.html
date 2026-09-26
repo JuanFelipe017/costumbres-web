@@ -5,14 +5,23 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Costumbres - Joyería y Artesanía Colombiana</title>
+    <title>Costumbres | Joyería y artesanía colombiana en Bogotá</title>
+    <meta name="description" content="Joyería con certificado de garantía y artesanías colombianas hechas a mano: chaquira, werregue, sombrero vueltiao, mochila wayúu y más. Visítanos en el centro histórico de Bogotá o escríbenos por WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Costumbres" />
+    <meta property="og:title" content="Costumbres | Joyería y artesanía colombiana en Bogotá" />
+    <meta property="og:description" content="Joyería con certificado de garantía y artesanías colombianas hechas a mano: chaquira, werregue, sombrero vueltiao, mochila wayúu y más. Visítanos en el centro histórico de Bogotá o escríbenos por WhatsApp." />
+    <meta property="og:locale" content="es_CO" />
+    <!-- Al publicar en Cloudflare: agregar og:image, <link rel="canonical"> y <link rel="alternate" hreflang> con la URL absoluta del dominio -->
+    <link rel="icon" type="image/png" href="img/logos/icono-96.png" />
+    <link rel="apple-touch-icon" href="img/logos/icono-192.png" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Bricolage+Grotesque:wght@600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=arrow_forward,chat,close,eco,energy_savings_leaf,expand_more,format_quote,location_on,mail,map,menu,open_in_new,pause,play_arrow,schedule,verified&amp;display=block"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
@@ -22,69 +31,74 @@
 
 <body
     class="bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden organic-texture">
+    <a href="#contenido"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-surface focus:text-on-primary-fixed-variant focus:px-5 focus:py-3 focus:rounded-full focus:shadow-md font-label-md text-label-md">Saltar al contenido</a>
     <!-- TopNavBar -->
-    <nav
+    <nav aria-label="Principal"
         class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
         <div
-            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm max-w-container-max mx-auto h-20">
-            <a href="index.html" class="cursor-pointer transition-transform active:scale-95 flex items-center gap-3">
-                <img alt="Costumbres Logo" class="h-12 w-auto object-contain" src="img/logos/icono.png" />
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <a href="index.html" aria-label="Costumbres, inicio" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
+                <img alt="" class="h-12 w-12 object-contain" src="img/logos/icono-96.png" width="48" height="48" />
                 <span
                     class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
-                    href="index.html">Tienda</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <a class="font-label-md text-label-md text-on-primary-fixed-variant border-b-2 border-primary pb-1"
+                    href="index.html" aria-current="page">Tienda</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
                     href="categorias.html">Categorías</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
                     href="historia.html">Historia</a>
-                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
                     href="contacto.html">Contacto</a>
-                <span class="flex items-center gap-2 border-l border-outline-variant/40 pl-6">
-                    <a href="index.html" title="Español">
-                        <img src="https://flagcdn.com/24x18/co.png" alt="ES" class="rounded-sm shadow-sm" />
+                <div class="flex items-center gap-1 border-l border-outline-variant/40 pl-6" role="group" aria-label="Idioma">
+                    <a href="index.html" hreflang="es" lang="es" title="Español"
+                        class="flex items-center gap-2 px-3 py-2 rounded-full font-label-md text-label-md transition-colors text-on-primary-fixed-variant bg-surface-container-low" aria-current="true">
+                        <img src="https://flagcdn.com/24x18/co.png" alt="" width="24" height="18" class="rounded-sm shadow-sm" />ES
                     </a>
-                    <a href="en/index.html" title="English" class="opacity-50 hover:opacity-100 transition-opacity">
-                        <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="rounded-sm shadow-sm" />
+                    <a href="en/index.html" hreflang="en" lang="en" title="English"
+                        class="flex items-center gap-2 px-3 py-2 rounded-full font-label-md text-label-md transition-colors text-on-surface-variant hover:text-on-primary-fixed-variant">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="" width="24" height="18" class="rounded-sm shadow-sm" />EN
                     </a>
-                </span>
+                </div>
             </div>
-            <button id="menu-toggle" class="md:hidden p-2 rounded-full hover:bg-surface-container-low transition-colors"
-                aria-label="Abrir menú">
-                <span class="material-symbols-outlined">menu</span>
+            <button id="menu-toggle" type="button"
+                class="md:hidden w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors"
+                aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"
+                data-label-open="Abrir menú" data-label-close="Cerrar menú">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
             </button>
         </div>
         <div id="mobile-menu"
             class="hidden md:hidden flex-col bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 gap-1">
-            <a class="block py-3 font-label-md text-label-md text-primary font-bold" href="index.html">Tienda</a>
-            <a class="block py-3 font-label-md text-label-md text-on-surface-variant"
-                href="categorias.html">Categorías</a>
+            <a class="block py-3 font-label-md text-label-md text-on-primary-fixed-variant font-bold" href="index.html" aria-current="page">Tienda</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="categorias.html">Categorías</a>
             <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="historia.html">Historia</a>
             <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="contacto.html">Contacto</a>
-            <div
-                class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md">
-                <a class="text-primary font-bold" href="index.html">Español</a>
-                <span class="text-on-surface-variant/40">|</span>
-                <a class="text-on-surface-variant" href="en/index.html">English</a>
+            <div class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md"
+                role="group" aria-label="Idioma">
+                <a class="py-3 text-on-primary-fixed-variant font-bold" aria-current="true" href="index.html" hreflang="es" lang="es">Español</a>
+                <span class="text-on-surface-variant" aria-hidden="true">|</span>
+                <a class="py-3 text-on-surface-variant" href="en/index.html" hreflang="en" lang="en">English</a>
             </div>
         </div>
     </nav>
-    <main class="pt-20">
+    <main id="contenido" class="pt-20">
         <!-- Hero Section -->
         <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img alt="Collar artesanal en chaquira, hecho a mano, con patrones geométricos de colores"
+                <img alt="Collar artesanal en chaquira, hecho a mano, con patrones geométricos de colores" fetchpriority="high"
                     class="w-full h-full object-cover contrast-105 saturate-105 brightness-100" src="img/hero/hero-inicio.jpg" />
                 <!-- Sombra radial clara en el centro para aislar el texto -->
                 <div class="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.6)_0%,_transparent_70%)]"></div>
             </div>
-            
+
             <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
-                <span class="font-label-md text-label-md text-primary tracking-widest bg-surface-container-low/80 backdrop-blur px-4 py-1 rounded-full mb-6 inline-block border border-outline-variant/30">
-                    LEGADO ANCESTRAL
+                <span class="font-label-md text-label-md text-on-primary-fixed-variant bg-surface-container-low/80 backdrop-blur px-4 py-1 rounded-full mb-6 inline-block border border-outline-variant/30">
+                    Legado ancestral
                 </span>
-                
+
                 <!-- Tipografía oscura para máxima legibilidad -->
                 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight drop-shadow-sm">
                     El Corazón de Colombia en tus Manos
@@ -92,118 +106,105 @@
                 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto text-balance">
                     Piezas únicas tejidas con la sabiduría de generaciones, trayendo el alma de nuestros pueblos a tu hogar contemporáneo.
                 </p>
-                
+
                 <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20 inline-block text-center"
-                        href="categorias.html">
-                        Explorar Catálogo
-                    </a>
-                    <a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary/10 active:scale-95 transition-all inline-block text-center"
-                        href="historia.html">
-                        Nuestra Historia
-                    </a>
+                    <a class="bg-primary text-on-primary-fixed px-8 py-4 rounded-full font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20 inline-flex items-center justify-center gap-2 text-center" href="categorias.html">Explorar Catálogo</a>
+                    <a class="border-2 border-primary text-on-primary-fixed-variant px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary/10 active:scale-95 transition-all inline-flex items-center justify-center gap-2 text-center" href="historia.html">Nuestra Historia</a>
                 </div>
             </div>
         </section>
         <!-- Product Grid: Catálogo de Tesoros -->
         <section
             class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto woven-pattern rounded-[40px] my-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-6">
                 <div class="max-w-xl">
                     <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Catálogo de Tesoros</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Una selección curada de piezas
-                        maestras, desde las orillas del río Sinú hasta las montañas de la Sierra Nevada.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Una selección curada de piezas maestras, desde las orillas del río Sinú hasta las montañas de la Sierra Nevada.</p>
                 </div>
-                <a href="categorias.html" class="text-primary font-label-md flex items-center gap-2 group cursor-pointer decoration-none">
+                <a href="categorias.html" class="text-on-primary-fixed-variant font-label-md text-label-md flex items-center gap-2 group py-2 hover:underline underline-offset-4">
                     Ver todas las colecciones
-                    <span
-                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    <span class="material-symbols-outlined motion-safe:group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                <!-- Large Item -->
-                <div class="md:col-span-8 group cursor-pointer">
+                <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20consultar%20el%20precio%20de%3A%20R%C3%A9plicas%20Precolombinas" target="_blank" rel="noopener"
+                    class="md:col-span-8 group block rounded-3xl motion-safe:hover:-translate-y-1 transition-transform duration-300">
                     <div class="relative aspect-[16/9] overflow-hidden rounded-3xl earth-shadow mb-6">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            alt="Figuras antropomorfas de orfebrería precolombina colombiana"
-                            src="img/artesanias/f11.jpg" />
+                        <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                            alt="Réplicas artesanales de figuras antropomorfas de orfebrería precolombina" src="img/artesanias/f11.jpg" loading="lazy" decoding="async" />
                         <div class="absolute top-6 left-6">
-                            <span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-xs">MÁS VENDIDO</span>
+                            <span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-label-md">Réplica artesanal</span>
                         </div>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <span class="inline-flex items-center gap-2 font-label-md text-label-md text-primary uppercase tracking-widest mb-2">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>Orfebrería
-                            </span>
-                            <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Figuras Precolombinas</h3>
-                            <p class="text-on-surface-variant font-body-md">Pieza 100% hecha a mano</p>
-                        </div>
-                        <span class="font-headline-md text-primary">$XXX.000 COP</span>
-                    </div>
-                </div>
-                <!-- Vertical Item -->
-                <div class="md:col-span-4 flex flex-col group cursor-pointer">
-                    <div class="relative flex-grow aspect-[4/5] overflow-hidden rounded-3xl earth-shadow mb-6">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            alt="Aretes en plata con esmeraldas, joyería certificada" src="img/joyas/f03.jpg" />
                     </div>
                     <div>
-                        <span
-                            class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">
-                            <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>Joyería
+                        <span class="inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant mb-2">
+                            <span class="w-2 h-2 rounded-full bg-primary" aria-hidden="true"></span>Orfebrería
                         </span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Joyería Certificada</h3>
-                        <p class="text-on-surface-variant font-body-md">Aretes en Plata con Esmeralda</p>
-                        <span class="font-headline-md text-primary mt-2 block">$XXX.000 COP</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Réplicas Precolombinas</h3>
+                        <p class="text-on-surface-variant font-body-md">Réplicas en orfebrería, hechas a mano</p>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">Consultar precio por WhatsApp</span>
                     </div>
-                </div>
-                <!-- Small Items -->
-                <div class="md:col-span-4 group cursor-pointer">
-                    <div class="relative aspect-square overflow-hidden rounded-3xl earth-shadow mb-6">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            alt="Individuales tejidos a mano en fibra con patrones circulares de colores"
-                            src="img/artesanias/f20.jpg" />
+                </a>
+                <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20consultar%20el%20precio%20de%3A%20Joyer%C3%ADa%20con%20Certificado" target="_blank" rel="noopener"
+                    class="md:col-span-4 flex flex-col group block rounded-3xl motion-safe:hover:-translate-y-1 transition-transform duration-300">
+                    <div class="relative flex-grow aspect-[4/5] overflow-hidden rounded-3xl earth-shadow mb-6">
+                        <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                            alt="Aretes en plata con esmeralda y anillo en su estuche" src="img/joyas/f03.jpg" loading="lazy" decoding="async" />
                     </div>
                     <div>
-                        <span
-                            class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary uppercase tracking-widest mb-2">
-                            <span class="w-2 h-2 rounded-full bg-secondary"></span>Fibra
+                        <span class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary mb-2">
+                            <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim" aria-hidden="true"></span>Joyería
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Joyería con Certificado</h3>
+                        <p class="text-on-surface-variant font-body-md">Aretes en plata con esmeralda</p>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">Consultar precio por WhatsApp</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20consultar%20el%20precio%20de%3A%20Individuales%20Tejidos" target="_blank" rel="noopener"
+                    class="md:col-span-4 group block rounded-3xl motion-safe:hover:-translate-y-1 transition-transform duration-300">
+                    <div class="relative aspect-square overflow-hidden rounded-3xl earth-shadow mb-6">
+                        <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                            alt="Individuales tejidos a mano en fibra con patrones circulares de colores" src="img/artesanias/f20.jpg" loading="lazy" decoding="async" />
+                    </div>
+                    <div>
+                        <span class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary mb-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary" aria-hidden="true"></span>Fibra
                         </span>
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Individuales Tejidos</h3>
-                        <p class="text-on-surface-variant font-body-md">Tejido en Fibra Natural</p>
+                        <p class="text-on-surface-variant font-body-md">Tejido en fibra natural</p>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">Consultar precio por WhatsApp</span>
                     </div>
-                </div>
-                <div class="md:col-span-4 group cursor-pointer">
+                </a>
+                <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20consultar%20el%20precio%20de%3A%20Set%20de%20Pulseras" target="_blank" rel="noopener"
+                    class="md:col-span-4 group block rounded-3xl motion-safe:hover:-translate-y-1 transition-transform duration-300">
                     <div class="relative aspect-square overflow-hidden rounded-3xl earth-shadow mb-6">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            alt="Pulseras artesanales tejidas en fibra con hilos dorados"
-                            src="img/artesanias/f46.jpg" />
+                        <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                            alt="Pulseras artesanales tejidas en fibra con hilos dorados" src="img/artesanias/f46.jpg" loading="lazy" decoding="async" />
                     </div>
                     <div>
-                        <span
-                            class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary uppercase tracking-widest mb-2">
-                            <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>Fibra
+                        <span class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary mb-2">
+                            <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim" aria-hidden="true"></span>Fibra
                         </span>
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Set de Pulseras</h3>
-                        <p class="text-on-surface-variant font-body-md">Tejido en Fibra y Metal</p>
+                        <p class="text-on-surface-variant font-body-md">Tejido en fibra y metal</p>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">Consultar precio por WhatsApp</span>
                     </div>
-                </div>
-                <div class="md:col-span-4 group cursor-pointer">
+                </a>
+                <a href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20consultar%20el%20precio%20de%3A%20Arte%20Decorativo" target="_blank" rel="noopener"
+                    class="md:col-span-4 group block rounded-3xl motion-safe:hover:-translate-y-1 transition-transform duration-300">
                     <div class="relative aspect-square overflow-hidden rounded-3xl earth-shadow mb-6">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            alt="Arte decorativo artesanal con círculos de colores en relieve"
-                            src="img/artesanias/f60.jpg" />
+                        <img class="w-full h-full object-cover motion-safe:group-hover:scale-105 transition-transform duration-700"
+                            alt="Arte decorativo artesanal con círculos de colores en relieve" src="img/artesanias/f60.jpg" loading="lazy" decoding="async" />
                     </div>
                     <div>
-                        <span
-                            class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary uppercase tracking-widest mb-2">
-                            <span class="w-2 h-2 rounded-full bg-secondary"></span>Decoración
+                        <span class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary mb-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary" aria-hidden="true"></span>Decoración
                         </span>
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Arte Decorativo</h3>
-                        <p class="font-body-md text-on-surface-variant">Paneles Artesanales para Pared</p>
+                        <p class="text-on-surface-variant font-body-md">Paneles artesanales para pared</p>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">Consultar precio por WhatsApp</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <!-- Visit Us Section -->
@@ -211,94 +212,99 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="space-y-10">
                     <div>
-                        <span class="font-label-md text-label-md text-primary mb-4 block">NUESTRA CASA</span>
-                        <h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-on-surface">Visítanos
-                            en el Centro Histórico</h2>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-6">Ven a sentir las texturas y
-                            conocer las historias detrás de cada pieza en nuestro espacio showroom en Bogotá.</p>
+                        <span class="font-label-md text-label-md text-on-primary-fixed-variant mb-4 block">Nuestra casa</span>
+                        <h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-on-surface">Visítanos en el Centro Histórico</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-6">Ven a sentir las texturas y conocer las historias detrás de cada pieza en nuestro espacio showroom en Bogotá.</p>
                     </div>
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+                            <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">location_on</span>
                             <div>
-                                <p class="font-headline-md text-on-surface">Calle del Sol #12-45</p>
-                                <p class="text-on-surface-variant">Bogotá, Colombia</p>
+                                <p class="font-headline-md text-on-surface">Calle 16 # 5-24, Local 11</p>
+                                <p class="text-on-surface-variant">Centro Histórico, Bogotá, Colombia</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+                            <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">schedule</span>
                             <div>
-                                <p class="font-headline-md text-on-surface">Lunes a Sábado</p>
-                                <p class="text-on-surface-variant">9:00 AM - 7:00 PM</p>
+                                <p class="font-headline-md text-on-surface">Lunes a sábado</p>
+                                <p class="text-on-surface-variant">10:00 a. m. – 7:00 p. m.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="pt-6">
-                        <a class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-label-md text-label-md hover:brightness-105 transition-all shadow-lg shadow-green-500/20 active:scale-95"
-                            href="https://wa.me/573000000000">
-                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                </path>
-                            </svg>
+                    <div class="pt-6 space-y-4">
+                        <a class="inline-flex items-center gap-3 bg-whatsapp text-on-surface px-8 py-4 rounded-full font-label-md text-label-md hover:brightness-105 transition-all shadow-lg shadow-whatsapp/20 active:scale-95" href="https://wa.me/573000000000?text=Hola%2C%20Costumbres.%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20piezas." target="_blank" rel="noopener">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
                             Chatea con nosotros
                         </a>
+                        <p class="font-body-md text-label-md text-on-surface-variant max-w-md">Al escribirnos por WhatsApp o correo aceptas el tratamiento de tus datos según nuestra <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="privacidad.html">política de privacidad</a>.</p>
                     </div>
                 </div>
-                <div class="relative rounded-3xl overflow-hidden earth-shadow h-[500px]">
-                    <iframe class="w-full h-full border-0"
-                        src="https://www.google.com/maps?q=Calle+16+%235-24+Local+11,+Bogotá,+Colombia&output=embed"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        title="Ubicación de Costumbres">
-                    </iframe>
+                <div class="relative rounded-3xl overflow-hidden earth-shadow h-80 md:h-[500px]">
+                    <div class="map-facade w-full h-full bg-surface-container-low flex flex-col items-center justify-center gap-4 p-6 text-center"
+                        data-map-src="https://www.google.com/maps?q=Calle+16+%235-24+Local+11%2C+Bogot%C3%A1%2C+Colombia&amp;output=embed" data-map-title="Ubicación de Costumbres en Bogotá">
+                        <span class="material-symbols-outlined text-on-primary-fixed-variant text-5xl" aria-hidden="true">map</span>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Al cargar el mapa, Google puede usar cookies. <a class="underline underline-offset-4" href="privacidad.html#cookies">Más información</a></p>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <button type="button" class="map-load bg-primary text-on-primary-fixed px-6 py-3 rounded-full font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all">Cargar mapa</button>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle+16+%235-24+Local+11%2C+Bogot%C3%A1%2C+Colombia" target="_blank" rel="noopener"
+                                class="border-2 border-primary text-on-primary-fixed-variant px-6 py-3 rounded-full font-label-md text-label-md hover:bg-primary/10 transition-all inline-flex items-center gap-2">Abrir en Google Maps
+                                <span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-20 pb-10 mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-16">
-            <div class="col-span-1 space-y-6">
-                <span class="font-headline-md text-headline-md text-primary font-bold">Costumbres</span>
-                <p class="font-body-md text-body-md text-on-surface-variant pr-8">Joyería certificada y artesanía
-                    colombiana hecha a mano, con el alma de nuestra gente.</p>
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-16 pb-10 mt-12">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-x-gutter gap-y-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+            <div class="col-span-2 md:col-span-1 space-y-4">
+                <p class="font-headline-md text-headline-md text-on-primary-fixed-variant font-bold">Costumbres</p>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Joyería con certificado de garantía y artesanía colombiana hecha a mano, con el alma de nuestra gente.</p>
             </div>
             <div>
-                <h4 class="font-label-md text-label-md text-on-surface mb-6">EXPLORAR</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="index.html">Inicio</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="categorias.html">Categorías</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="historia.html">Historia</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="contacto.html">Contacto</a></li>
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Explorar</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="index.html">Inicio</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="categorias.html">Categorías</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="historia.html">Historia</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-label-md text-label-md text-on-surface mb-6">REDES</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="https://www.instagram.com/costumbres.co/">Instagram</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="#">Facebook</a></li>
-                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            href="#">TikTok</a></li>
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Redes</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="https://www.instagram.com/costumbres.co/" target="_blank" rel="noopener">Instagram</a></li>
+                    <!-- PENDIENTE: agregar Facebook y TikTok cuando tengan URL real -->
                 </ul>
             </div>
             <div>
-                <img class="w-64 h-auto" src="img/logos/logo.png" alt="Logo de Costumbres Joyería y Artesanía" />
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Legal</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="privacidad.html">Política de privacidad</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="privacidad.html#cookies">Política de cookies</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="terminos.html">Términos y condiciones</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="terminos.html#garantia">Garantía y devoluciones</a></li>
+                </ul>
+            </div>
+            <div class="flex md:justify-end items-start">
+                <img class="w-40 h-auto" src="img/logos/logo-320.png" width="160" height="160" loading="lazy" decoding="async"
+                    alt="Costumbres Joyería y Artesanía" />
             </div>
         </div>
-        <div class="px-margin-desktop max-w-container-max mx-auto pt-10 border-t border-outline-variant/10 text-center">
-            <p class="font-label-md text-label-md text-on-secondary-container opacity-80 italic">© 2026 Costumbres
-                Joyería y Artesanía.</p>
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/30 text-center space-y-3">
+            <!-- PENDIENTE: razón social y NIT reales (Ley 1480 de 2011, art. 23) -->
+            <p class="font-body-md text-label-md text-on-surface-variant">
+                [RAZÓN SOCIAL] · NIT [000.000.000-0] · Calle 16 # 5-24, Local 11, Centro Histórico, Bogotá, Colombia ·
+                <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="mailto:costumbres.co@hotmail.com">costumbres.co@hotmail.com</a>
+            </p>
+            <p class="font-body-md text-label-md text-on-surface-variant max-w-2xl mx-auto">Si tienes una queja, escríbenos primero; también puedes acudir a la <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="https://www.sic.gov.co" target="_blank" rel="noopener">Superintendencia de Industria y Comercio</a>.</p>
+            <p class="font-label-md text-label-md text-on-secondary-container italic">© 2026 Costumbres Joyería y Artesanía.</p>
         </div>
     </footer>
-    <script src="js/index.js"></script>
     <script src="js/nav.js"></script>
-
+    <script src="js/mapa.js"></script>
 </body>
 
 </html>
