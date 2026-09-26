@@ -29,13 +29,16 @@ Además:
 - Confirmar con quien entregó las ilustraciones de `img/hero/` que se pueden usar comercialmente.
 - Revisar las páginas `privacidad.html` y `terminos.html` con un abogado o contador.
 
+> Los 404 usan rutas desde la raíz (`/css/...`), así que se ven bien en Cloudflare Pages o con `python -m http.server`, pero no abriendo el archivo con doble clic.
+
 ## Estructura
 
 ```
 index.html  categorias.html  historia.html  contacto.html   páginas principales
 privacidad.html  terminos.html                              política de datos/cookies y términos/garantía
-en/                                                          las mismas 6 páginas en inglés
-css/   base.css (compartido) + uno por página
-js/    tailwind-config.js (tokens), nav.js, carrusel.js, mapa.js, reveal.js, contacto.js
+404.html                                                     página de error (Cloudflare Pages la sirve sola)
+en/                                                          las mismas 7 páginas en inglés
+css/   base.css (compartido), animaciones.css (todo el movimiento), visor.css + uno por página
+js/    tailwind-config.js (tokens), animaciones.js, nav.js, carrusel.js, visor.js, mapa.js, contacto.js
 img/   hero, artesanias, joyas, local, logos (icono-96/192 y logo-320 son copias livianas)
 ```

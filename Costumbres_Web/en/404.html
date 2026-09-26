@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Page not found | Costumbres</title>
+    <meta name="description" content="The page you are looking for doesn't exist or has moved." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Costumbres" />
+    <meta property="og:title" content="Page not found | Costumbres" />
+    <meta property="og:description" content="The page you are looking for doesn't exist or has moved." />
+    <meta property="og:locale" content="en_US" />
+    <!-- Al publicar en Cloudflare: agregar og:image, <link rel="canonical"> y <link rel="alternate" hreflang> con la URL absoluta del dominio -->
+    <link rel="icon" type="image/png" href="/img/logos/icono-96.png" />
+    <link rel="apple-touch-icon" href="/img/logos/icono-192.png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Bricolage+Grotesque:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=arrow_forward,chat,chevron_left,chevron_right,close,eco,energy_savings_leaf,expand_more,format_quote,location_on,mail,map,menu,open_in_new,pause,play_arrow,schedule,verified,zoom_in&amp;display=block"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="/js/tailwind-config.js"></script>
+    <script src="/js/animaciones.js"></script>
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/animaciones.css" rel="stylesheet" />
+    <meta name="robots" content="noindex" />
+</head>
+
+<body
+    class="bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden organic-texture">
+    <a href="#contenido"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-surface focus:text-on-primary-fixed-variant focus:px-5 focus:py-3 focus:rounded-full focus:shadow-md font-label-md text-label-md">Skip to content</a>
+    <!-- TopNavBar -->
+    <nav aria-label="Main"
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <a href="/en/index.html" aria-label="Costumbres, home" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
+                <img alt="" class="h-12 w-12 object-contain" src="/img/logos/icono-96.png" width="48" height="48" />
+                <span
+                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
+                    href="/en/index.html">Shop</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
+                    href="/en/categorias.html">Categories</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
+                    href="/en/historia.html">Our Story</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors duration-300"
+                    href="/en/contacto.html">Contact</a>
+                <div class="flex items-center gap-1 border-l border-outline-variant/40 pl-6" role="group" aria-label="Language">
+                    <a href="/index.html" hreflang="es" lang="es" title="Español"
+                        class="flex items-center gap-2 px-3 py-2 rounded-full font-label-md text-label-md transition-colors text-on-surface-variant hover:text-on-primary-fixed-variant">
+                        <img src="https://flagcdn.com/24x18/co.png" alt="" width="24" height="18" class="rounded-sm shadow-sm" />ES
+                    </a>
+                    <a href="/en/index.html" hreflang="en" lang="en" title="English"
+                        class="flex items-center gap-2 px-3 py-2 rounded-full font-label-md text-label-md transition-colors text-on-primary-fixed-variant bg-surface-container-low" aria-current="true">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="" width="24" height="18" class="rounded-sm shadow-sm" />EN
+                    </a>
+                </div>
+            </div>
+            <button id="menu-toggle" type="button"
+                class="md:hidden w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                data-label-open="Open menu" data-label-close="Close menu">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden flex-col bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 gap-1">
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="/en/index.html">Shop</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="/en/categorias.html">Categories</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="/en/historia.html">Our Story</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="/en/contacto.html">Contact</a>
+            <div class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md"
+                role="group" aria-label="Language">
+                <a class="py-3 text-on-surface-variant" href="/index.html" hreflang="es" lang="es">Español</a>
+                <span class="text-on-surface-variant" aria-hidden="true">|</span>
+                <a class="py-3 text-on-primary-fixed-variant font-bold" aria-current="true" href="/en/index.html" hreflang="en" lang="en">English</a>
+            </div>
+        </div>
+    </nav>
+    <main id="contenido" class="pt-20">
+        <section class="min-h-[70vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24">
+            <div class="max-w-2xl mx-auto text-center" data-anim="hero">
+                <p class="font-label-md text-label-md text-on-primary-fixed-variant bg-surface-container-low px-4 py-1 rounded-full mb-6 inline-block border border-outline-variant/30">Error 404</p>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">This page came unwoven</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 text-balance">We couldn't find what you were looking for. The link may be broken or the page may have moved.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a class="bg-primary text-on-primary-fixed px-8 py-4 rounded-full font-label-md text-label-md shadow-lg shadow-primary/20 inline-flex items-center justify-center gap-2 text-center press-anim overlay-anim overlay-anim--claro" href="/en/index.html">Back to home</a>
+                    <a class="border-2 border-primary text-on-primary-fixed-variant px-8 py-4 rounded-full font-label-md text-label-md inline-flex items-center justify-center gap-2 text-center press-anim overlay-anim" href="/en/categorias.html">See categories</a>
+                </div>
+                <p class="mt-10 font-body-md text-body-md text-on-surface-variant">Looking for a specific piece?
+                    <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="https://wa.me/573000000000?text=Hi%20Costumbres%2C%20I%20was%20looking%20for%20something%20on%20your%20website%20and%20couldn%27t%20find%20it." target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-16 pb-24 md:pb-10 mt-12">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-x-gutter gap-y-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+            <div class="col-span-2 md:col-span-1 space-y-4">
+                <p class="font-headline-md text-headline-md text-on-primary-fixed-variant font-bold">Costumbres</p>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Jewelry with a warranty certificate and handmade Colombian crafts, with the soul of our people.</p>
+            </div>
+            <div>
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Explore</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/categorias.html">Categories</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/historia.html">Our Story</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/contacto.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Follow us</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="https://www.instagram.com/costumbres.co/" target="_blank" rel="noopener">Instagram</a></li>
+                    <!-- PENDIENTE: agregar Facebook y TikTok cuando tengan URL real -->
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-label-md text-label-md text-on-surface mb-4">Legal</h2>
+                <ul class="space-y-2">
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/privacidad.html">Privacy policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/privacidad.html#cookies">Cookie policy</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/terminos.html">Terms and conditions</a></li>
+                    <li><a class="text-on-surface-variant hover:text-on-primary-fixed-variant transition-colors hover:underline decoration-primary/30 underline-offset-4 inline-block py-1" href="/en/terminos.html#garantia">Warranty and returns</a></li>
+                </ul>
+            </div>
+            <div class="flex md:justify-end items-start">
+                <img class="w-40 h-auto" src="/img/logos/logo-320.png" width="160" height="160" loading="lazy" decoding="async"
+                    alt="Costumbres Jewelry & Handcrafts" />
+            </div>
+        </div>
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/30 text-center space-y-3">
+            <!-- PENDIENTE: razón social y NIT reales (Ley 1480 de 2011, art. 23) -->
+            <p class="font-body-md text-label-md text-on-surface-variant">
+                [LEGAL BUSINESS NAME] · Tax ID (NIT) [000.000.000-0] · Calle 16 # 5-24, Local 11, Historic Center, Bogotá, Colombia ·
+                <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="mailto:costumbres.co@hotmail.com">costumbres.co@hotmail.com</a>
+            </p>
+            <p class="font-body-md text-label-md text-on-surface-variant max-w-2xl mx-auto">If you have a complaint, please contact us first; you can also reach Colombia's consumer authority, the <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="https://www.sic.gov.co" target="_blank" rel="noopener">Superintendencia de Industria y Comercio</a>.</p>
+            <p class="font-label-md text-label-md text-on-secondary-container italic">© 2026 Costumbres Jewelry & Handcrafts.</p>
+        </div>
+        <!-- Botón flotante de WhatsApp (dentro del footer para quedar en una región; es fixed) -->
+    <a href="https://wa.me/573000000000?text=Hi%20Costumbres%2C%20I%27m%20writing%20from%20your%20website%20and%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Message us on WhatsApp" title="Message us on WhatsApp"
+        class="wa-fab fixed z-40 w-14 h-14 rounded-full bg-whatsapp text-on-surface shadow-lg shadow-whatsapp/30 flex items-center justify-center lift-anim overlay-anim overlay-anim--claro">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+    </a>
+    </footer>
+    <script src="/js/nav.js"></script>
+</body>
+
+</html>

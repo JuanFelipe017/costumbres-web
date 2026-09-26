@@ -6,7 +6,9 @@ Sitio de **Costumbres, joyería y artesanía colombiana**. Sitio estático bilin
 - HTML estático + **Tailwind vía CDN** (`cdn.tailwindcss.com`, plugins forms y container-queries).
 - Tokens de diseño en `Costumbres_Web/js/tailwind-config.js` (colores estilo Material 3: `primary` #6d9773, `secondary` #275667, `background` #fdf9f4; fuentes **Bricolage Grotesque** para títulos y **Be Vietnam Pro** para texto; espaciados `margin-desktop`, `margin-mobile`, `gutter`, `container-max`).
 - CSS mínimo por página en `css/` (`base.css` es compartido; incluye `.organic-texture`).
-- JS vanilla en `js/`: `nav.js` (menú móvil accesible, compartido), `carrusel.js` (carrusel con botón de pausa, `[data-carousel]`), `mapa.js` (Google Maps solo al pulsar «Cargar mapa»), `reveal.js` (aparición suave `[data-reveal]`, respeta reduced-motion), `contacto.js` (modal de garantía con `<dialog>`).
+- JS vanilla en `js/`: `animaciones.js` (en `<head>`; aparición `[data-reveal]` y `[data-anim="stagger"]`, estado del nav), `nav.js` (menú móvil accesible), `carrusel.js` (carrusel con pausa, `[data-carousel]`), `visor.js` (visor de fotos para `[data-carousel]` y `[data-visor]`), `mapa.js` (Google Maps solo al pulsar «Cargar mapa»), `contacto.js` (modal de garantía con `<dialog>`).
+- Movimiento centralizado en `css/animaciones.css` (tokens `--ease-*` y `--dur-*`): solo transform/opacity, 150–700 ms, todo desactivado con `prefers-reduced-motion`. Clases de hover: `lift-anim`, `zoom-anim`, `press-anim`, `overlay-anim`, `ring-anim`. Hero con `data-anim="hero"`.
+- Botón flotante de WhatsApp (`.wa-fab`) dentro del footer de todas las páginas.
 - Contraste AA: para texto verde pequeño usar `text-on-primary-fixed-variant`; sobre botones `bg-primary` usar `text-on-primary-fixed`. `primary` como color de texto solo en títulos grandes sobre fondo claro.
 - Íconos: Material Symbols Outlined (Google Fonts). Banderas desde flagcdn.com.
 
@@ -15,7 +17,8 @@ Sitio de **Costumbres, joyería y artesanía colombiana**. Sitio estático bilin
 Costumbres_Web/
   index.html  categorias.html  historia.html  contacto.html   ← español
   privacidad.html  terminos.html                             ← legales (datos, cookies, garantía, retracto)
-  en/ (mismas 6 páginas)                                     ← inglés
+  404.html                                                   ← error (rutas desde la raíz)
+  en/ (mismas 7 páginas)                                     ← inglés
   css/  js/  img/{hero,artesanias,joyas,local,logos}
 ```
 
