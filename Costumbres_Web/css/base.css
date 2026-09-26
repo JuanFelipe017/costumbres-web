@@ -10,6 +10,19 @@ body {
     min-height: 100dvh;
 }
 
+/* Botón flotante de WhatsApp: respeta el área segura de los celulares con notch/barra */
+.wa-fab {
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+@media (min-width: 768px) {
+    .wa-fab {
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+}
+
 /* Foco de teclado visible en todo el sitio (verde oscuro de la paleta: on-primary-fixed-variant) */
 :focus-visible {
     outline: 2px solid #35533a;

@@ -257,6 +257,19 @@
     z-index: 1;
 }
 
+/* ---------- Botón flotante de WhatsApp: aparece una vez, después del hero ----------
+   "backwards" (no "both") para que al terminar el hover de .lift-anim siga funcionando. */
+@keyframes fab-entra {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.9);
+    }
+}
+
+.wa-fab {
+    animation: fab-entra 400ms var(--ease-out) 600ms backwards;
+}
+
 /* ---------- Reducir movimiento: todo en su lugar, sin transiciones ---------- */
 @media (prefers-reduced-motion: reduce) {
     @view-transition {
@@ -264,7 +277,8 @@
     }
 
     [data-anim="hero"] > *,
-    .icon-swap {
+    .icon-swap,
+    .wa-fab {
         animation: none;
     }
 
