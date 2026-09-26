@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Categories - Costumbres Jewelry & Handcrafts</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/categorias.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden organic-texture">
+    <nav
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
+        <div
+            class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer transition-transform active:scale-95">
+                <img alt="Costumbres Logo" class="h-12 w-auto object-contain" src="../img/logos/icono.png" />
+                <span
+                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="index.html">Shop</a>
+                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                    href="categorias.html">Categories</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="historia.html">Our Story</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="contacto.html">Contact</a>
+                <span class="flex items-center gap-2 border-l border-outline-variant/40 pl-6">
+                    <a href="../categorias.html" title="Español"
+                        class="opacity-50 hover:opacity-100 transition-opacity">
+                        <img src="https://flagcdn.com/24x18/co.png" alt="ES" class="rounded-sm shadow-sm" />
+                    </a>
+                    <a href="categorias.html" title="English">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="rounded-sm shadow-sm" />
+                    </a>
+                </span>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 rounded-full hover:bg-surface-container-low transition-colors"
+                aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden flex-col bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 gap-1">
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="index.html">Shop</a>
+            <a class="block py-3 font-label-md text-label-md text-primary font-bold"
+                href="categorias.html">Categories</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="historia.html">Our Story</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="contacto.html">Contact</a>
+            <div
+                class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md">
+                <a class="text-on-surface-variant" href="../categorias.html">Español</a>
+                <span class="text-on-surface-variant/40">|</span>
+                <a class="text-primary font-bold" href="categorias.html">English</a>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20 pb-12 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+        <!-- Page Header -->
+        <section class="mb-12">
+            <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">
+                Our Traditions</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Discover the soul of Colombia through its ancestral techniques. Every piece tells the story of a
+                territory, a family, and a legacy that endures.
+            </p>
+            <div class="weaving-divider mt-8 w-1/3"></div>
+        </section>
+        <!-- Categories Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+            <!-- Category: Beadwork -->
+            <div
+                class="lg:col-span-8 group cursor-pointer relative overflow-hidden rounded-xl border border-primary/5 bg-surface-container-low transition-all hover:shadow-lg">
+                <div class="flex flex-col md:flex-row h-full">
+                    <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Handwoven beaded necklace with multicolor geometric patterns"
+                            src="../img/artesanias/f01.jpg" />
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <span
+                            class="font-label-md text-label-md text-tertiary mb-2 uppercase tracking-widest">Handmade</span>
+                        <h3 class="font-headline-lg text-headline-md text-on-surface mb-4">Beadwork</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Necklaces, earrings and bracelets woven thread by thread in glass beads, with
+                            colorful geometric patterns that give each piece its own identity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Category: Fiber Weaving -->
+            <div
+                class="lg:col-span-4 group cursor-pointer relative overflow-hidden rounded-xl border border-primary/5 bg-surface-container-low transition-all hover:shadow-lg flex flex-col">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        alt="Handwoven placemats and bracelets in natural fiber with colorful patterns"
+                        src="../img/artesanias/f20.jpg" />
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Fiber Weaving</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Placemats, bracelets and baskets handwoven in natural fiber, with high-quality
+                        artisanal finishes.
+                    </p>
+                </div>
+            </div>
+            <!-- Category: Certified Jewelry -->
+            <div
+                class="lg:col-span-4 group cursor-pointer relative overflow-hidden rounded-xl border border-primary/5 bg-surface-container-low transition-all hover:shadow-lg flex flex-col">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        alt="Silver earrings with emerald stone, certified jewelry" src="../img/joyas/f04.jpg" />
+                </div>
+                <div class="p-8 flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Certified Jewelry</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Rings and earrings in silver and gold with natural stones, backed by a warranty
+                        certificate.
+                    </p>
+                </div>
+            </div>
+            <!-- Category: Decorative Art -->
+            <div
+                class="lg:col-span-8 group cursor-pointer relative overflow-hidden rounded-xl border border-primary/5 bg-surface-container-low transition-all hover:shadow-lg">
+                <div class="flex flex-col md:flex-row-reverse h-full">
+                    <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Decorative handcrafted panels with colorful circular design"
+                            src="../img/artesanias/f60.jpg" />
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <span class="font-label-md text-label-md text-tertiary mb-2 uppercase tracking-widest">For the
+                            Home</span>
+                        <h3 class="font-headline-lg text-headline-md text-on-surface mb-4">Decorative Art</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Wall pieces and decorative objects that bring a Colombian touch to any space.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Techniques & Artisan Communities -->
+        <section class="mt-24 mb-8">
+            <div class="text-center mb-12">
+                <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Techniques & Artisan Communities</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Every piece we sell carries a technique, a region, and a community behind it. This is their story.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+
+                <!-- 1. Tamo -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f50.jpg","../img/artesanias/f51.jpg","../img/artesanias/f52.jpg","../img/artesanias/f53.jpg","../img/artesanias/f54.jpg","../img/artesanias/f55.jpg","../img/artesanias/f56.jpg","../img/artesanias/f59.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Wheat straw veneer, traditional handicraft from Nariño"
+                            src="../img/artesanias/f50.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Wheat straw veneer, traditional handicraft from Nariño"
+                            src="../img/artesanias/f50.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Wheat Straw Veneer (Tamo)
+                        </h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Wheat Straw Veneer is a traditional
+                            handicraft from Nariño that uses thin wheat straw fibers
+                            to decorate wooden pieces with intricate floral, landscape, and rural-inspired designs. Each
+                            handcrafted creation is unique and protected by a Designation of Origin, preserving its
+                            authenticity and cultural heritage.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Werregue -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f95.jpg","../img/artesanias/f96.jpg","../img/artesanias/f97.jpg","../img/artesanias/f99.jpg","../img/artesanias/f107.jpg","../img/artesanias/f108.jpg","../img/artesanias/f109.jpg","../img/artesanias/f112.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Werregue basket woven by the Wounaan community" src="../img/artesanias/f95.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Werregue basket woven by the Wounaan community" src="../img/artesanias/f95.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Werregue</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Werregue Baskets are handwoven by
+                            the Wounaan Indigenous community of Colombia's Pacific
+                            region using fibers from the werregue palm. Crafted with the traditional spiral weaving
+                            technique, each basket reflects a deep connection to nature, ancestral knowledge, and
+                            cultural traditions.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sombrero Vueltiao -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f70.jpg","../img/artesanias/f69.jpg","../img/artesanias/f71.jpg","../img/artesanias/f74.jpg","../img/artesanias/f77.jpg","../img/artesanias/f76.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Sombrero Vueltiao woven in caña flecha, Zenú people" src="../img/artesanias/f70.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Sombrero Vueltiao woven in caña flecha, Zenú people" src="../img/artesanias/f70.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Sombrero Vueltiao</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The Sombrero Vueltiao is one of
+                            Colombia's most iconic cultural symbols. Handwoven from caña
+                            flecha fibers by the Zenú people, its distinctive geometric patterns reflect Indigenous
+                            heritage and centuries of artisanal tradition passed down through generations.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Guacamayas -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f30.jpg","../img/artesanias/f10.jpg","../img/artesanias/f18.jpg","../img/artesanias/f22.jpg","../img/artesanias/f31.jpg","../img/artesanias/f33.jpg","../img/artesanias/f26.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Guacamayas coiled basketry, Boyacá" src="../img/artesanias/f30.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Guacamayas coiled basketry, Boyacá" src="../img/artesanias/f30.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Guacamayas</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Guacamayas Basketry is a
+                            traditional craft from Boyacá known for its vibrant colors and
+                            meticulous craftsmanship. Made from straw and fique fibers using a spiral coiling technique,
+                            each piece combines creativity, precision, and traditions passed down through generations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Mola -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f128.jpg","../img/artesanias/f129.jpg","../img/artesanias/f130.jpg","../img/artesanias/f127.jpg","../img/artesanias/f131.jpg","../img/artesanias/f126.jpg","../img/artesanias/f132.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Mola, decorative textile made by the Guna (Kuna) people"
+                            src="../img/artesanias/f128.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Mola, decorative textile made by the Guna (Kuna) people"
+                            src="../img/artesanias/f128.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Mola</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Molas are decorative handmade
+                            textiles created by the Indigenous Guna (Kuna) women of
+                            Colombia and Panama. Made using the reverse appliqué technique with multiple layers of
+                            fabric, their colorful designs are inspired by nature, everyday life, and the community's
+                            worldview.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Wayúu Bag -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f93.jpg","../img/artesanias/f91.jpg","../img/artesanias/f92.jpg","../img/artesanias/f136.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Handwoven Wayúu bag, La Guajira" src="../img/artesanias/f93.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Handwoven Wayúu bag, La Guajira" src="../img/artesanias/f93.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Wayúu Bag</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The Wayúu Bag, known as Susu ("what
+                            walks with you"), is one of the most representative
+                            handicrafts of La Guajira. Handwoven using cotton or maguey fibers with the crochet
+                            technique, each bag features unique patterns and vibrant colors that reflect the Wayúu
+                            people's identity, traditions, and creativity.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Manillas y Pulseras -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f38.jpg","../img/artesanias/f39.jpg","../img/artesanias/f41.jpg","../img/artesanias/f44.jpg","../img/artesanias/f45.jpg","../img/artesanias/f04.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Handwoven bracelets made with natural fibers" src="../img/artesanias/f38.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Traditional bracelets with geometric patterns" src="../img/artesanias/f38.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Bracelets & Wristbands</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Carry the legacy and mastery of ancestral weaving with you. This collection brings together
+                            handmade bracelets and wristbands crafted from carefully selected natural fibers, standing
+                            out for their subtle textures, varied thicknesses, and geometric patterns that reflect the
+                            cultural identity and artistry of our communities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. Emberá Necklace -->
+                <div class="rounded-xl overflow-hidden border border-primary/5 bg-surface-container-low">
+                    <div class="relative aspect-square overflow-hidden"
+                        data-carousel='["../img/artesanias/f02.jpg","../img/artesanias/f01.jpg","../img/artesanias/f03.jpg"]'>
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                            alt="Beaded necklace by the Emberá Chamí community" src="../img/artesanias/f02.jpg" />
+                        <img class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                            alt="Beaded necklace by the Emberá Chamí community" src="../img/artesanias/f02.jpg" />
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-3">Emberá Necklace</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The Emberá Beaded Necklace is
+                            handcrafted by the Emberá Chamí community of Risaralda. Woven
+                            with colorful beads, each necklace reflects the artisans' identity, traditions, and
+                            ancestral heritage, making every piece a unique expression of Colombian culture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to action -->
+        <section
+            class="mt-24 bg-primary-container rounded-xl p-12 text-center text-on-primary-container overflow-hidden relative">
+            <div class="relative z-10">
+                <h3 class="font-headline-lg text-headline-md md:text-headline-lg mb-4">Looking for something
+                    specific?
+                </h3>
+                <p class="font-body-lg text-body-lg mb-8 opacity-90">Write to us and we'll help you find the
+                    perfect piece.</p>
+                <a href="contacto.html"
+                    class="bg-surface text-primary px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform duration-200 active:scale-95 flex items-center gap-2 mx-auto w-fit">
+                    <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    Contact Us
+                </a>
+            </div>
+            <!-- Organic decorative element -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-tertiary opacity-10 rounded-full blur-3xl">
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-20 pb-10 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-16">
+            <div class="col-span-1 space-y-6">
+                <span class="font-headline-md text-headline-md text-primary font-bold">Costumbres</span>
+                <p class="font-body-md text-body-md text-on-surface-variant pr-8">Certified jewelry and Colombian
+                    handcrafts, made by hand, with the soul of our people.</p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-on-surface mb-6">EXPLORE</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="categorias.html">Categories</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="historia.html">History</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="contacto.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-on-surface mb-6">FOLLOW US</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="https://www.instagram.com/costumbres.co/">Instagram</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="#">Facebook</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div>
+                <img class="w-64 h-auto" src="../img/logos/logo.png" alt="Costumbres Jewelry & Handcrafts logo" />
+            </div>
+        </div>
+        <div class="px-margin-desktop max-w-container-max mx-auto pt-10 border-t border-outline-variant/10 text-center">
+            <p class="font-label-md text-label-md text-on-secondary-container opacity-80 italic">© 2026 Costumbres
+                Jewelry & Handcrafts.</p>
+        </div>
+    </footer>
+    <script src="../js/carrusel.js"></script>
+    <script src="../js/categorias.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

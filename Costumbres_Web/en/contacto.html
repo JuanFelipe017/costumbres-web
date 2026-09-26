@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact | Costumbres Jewelry & Handcrafts</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Bricolage+Grotesque:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/contacto.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden organic-texture">
+    <!-- TopNavBar -->
+    <nav
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
+        <div
+            class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer transition-transform active:scale-95">
+                <img alt="Costumbres Logo" class="h-12 w-auto object-contain" src="../img/logos/icono.png" />
+                <span
+                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="index.html">Shop</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="categorias.html">Categories</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="historia.html">Our Story</a>
+                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                    href="contacto.html">Contact</a>
+                <span class="flex items-center gap-2 border-l border-outline-variant/40 pl-6">
+                    <a href="../contacto.html" title="Español" class="opacity-50 hover:opacity-100 transition-opacity">
+                        <img src="https://flagcdn.com/24x18/co.png" alt="ES" class="rounded-sm shadow-sm" />
+                    </a>
+                    <a href="contacto.html" title="English">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="rounded-sm shadow-sm" />
+                    </a>
+                </span>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 rounded-full hover:bg-surface-container-low transition-colors"
+                aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden flex-col bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 gap-1">
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="index.html">Shop</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant"
+                href="categorias.html">Categories</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="historia.html">Our Story</a>
+            <a class="block py-3 font-label-md text-label-md text-primary font-bold" href="contacto.html">Contact</a>
+            <div
+                class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md">
+                <a class="text-on-surface-variant" href="../contacto.html">Español</a>
+                <span class="text-on-surface-variant/40">|</span>
+                <a class="text-primary font-bold" href="contacto.html">English</a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 pt-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Left Column: Contact Form & Info -->
+            <section class="lg:col-span-7 space-y-12">
+                <div>
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+                        Let's Connect</h2>
+                    <p class="text-body-lg text-on-surface-variant max-w-xl">Every piece in our collection tells a
+                        story.
+                        Have questions about an ancestral technique or a special order? Message us directly — we reply
+                        fast.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="https://wa.me/573000000000"
+                        class="flex flex-col items-start gap-4 bg-primary text-on-primary p-8 rounded-xl hover:brightness-110 transition-all active:scale-95 duration-200">
+                        <span class="material-symbols-outlined text-4xl">chat</span>
+                        <div>
+                            <p class="font-headline-md text-headline-md">WhatsApp</p>
+                            <p class="opacity-80 text-sm">Instant reply</p>
+                        </div>
+                    </a>
+                    <a href="mailto:costumbres.co@hotmail.com"
+                        class="flex flex-col items-start gap-4 bg-surface-container-low border border-primary/10 p-8 rounded-xl hover:bg-surface-container transition-all active:scale-95 duration-200">
+                        <span class="material-symbols-outlined text-4xl text-primary">mail</span>
+                        <div>
+                            <p class="font-headline-md text-headline-md text-on-surface">Email</p>
+                            <p class="text-on-surface-variant text-sm">costumbres.co@hotmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- Right Column: Map, Socials, & WhatsApp -->
+            <aside class="lg:col-span-5 space-y-8">
+                <!-- Location: real map (TODO: replace with the final address) -->
+                <div class="bg-surface-container overflow-hidden rounded-xl shadow-sm group">
+                    <div class="h-64 relative">
+                        <iframe class="w-full h-full border-0"
+                            src="https://www.google.com/maps?q=Calle+16+%235-24+Local+11+Bogota+Colombia&output=embed"
+                            loading="lazy" allowfullscreen title="Costumbres Location">
+                        </iframe>
+                        <div class="absolute bottom-4 left-4 pointer-events-none">
+                            <span
+                                class="bg-primary text-on-primary text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">Our
+                                Home</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="location_on">location_on</span>
+                            <div>
+                                <p class="font-headline-md text-headline-md text-on-surface">Calle de la
+                                    Tradición #12-45</p>
+                                <p class="text-on-surface-variant">San Felipe neighborhood, Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                            <div>
+                                <p class="font-label-md text-label-md text-on-surface">Store Hours</p>
+                                <p class="text-on-surface-variant">Monday to Saturday: 10:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!-- FAQ -->
+        <section class="mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-display-md text-display-md text-primary mb-3">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-on-surface-variant mb-8">
+                    Find answers to the most common questions and enjoy our handcrafted Colombian artisan pieces.
+                </p>
+                <div class="space-y-4">
+                    <!-- Question -->
+                    <details class="group bg-surface-container-low rounded-xl p-5 border border-primary/10">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-on-surface">
+                            Are all the handicrafts handmade?
+                            <span class="material-symbols-outlined transition group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed">
+                            Yes. Every piece is handcrafted by Colombian artisans using traditional techniques
+                            passed down from generation to generation.
+                        </p>
+                    </details>
+                    <!-- Question -->
+                    <details class="group bg-surface-container-low rounded-xl p-5 border border-primary/10">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-on-surface">
+                            How should I care for my handicraft?
+                            <span class="material-symbols-outlined transition group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed">
+                            We recommend avoiding moisture, prolonged exposure to sunlight, and contact with
+                            chemicals to preserve its beauty and durability.
+                        </p>
+                    </details>
+                    <!-- Question -->
+                    <details class="group bg-surface-container-low rounded-xl p-5 border border-primary/10">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-on-surface">
+                            Can I reserve a handicraft before visiting the store?
+                            <span class="material-symbols-outlined transition group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+
+                        <p class="mt-4 text-on-surface-variant leading-relaxed">
+                            Absolutely. Contact us through WhatsApp and we'll check the availability of the piece
+                            you're looking for before your visit.
+                        </p>
+                    </details>
+                    <!-- Question -->
+                    <details class="group bg-surface-container-low rounded-xl p-5 border border-primary/10">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-on-surface">
+                            Do your handicrafts include a warranty?
+                            <span class="material-symbols-outlined transition group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-on-surface-variant leading-relaxed">
+                            Yes. All of our products are covered by a warranty against manufacturing defects.
+                            You can view the complete warranty policy by clicking the Warranty button below.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- Warranty -->
+        <section class="mt-16">
+            <div
+                class="bg-surface-container rounded-2xl border border-primary/10 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <h3 class="font-headline-lg text-headline-lg text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined">
+                            verified
+                        </span>
+
+                        Product Warranty
+                    </h3>
+                    <p class="text-on-surface-variant mt-2 max-w-2xl">
+                        All of our handcrafted products are covered against manufacturing defects.
+                        Read our warranty policy and care recommendations to help preserve every piece in excellent
+                        condition.
+                    </p>
+                </div>
+
+                <button onclick="abrirGarantia()"
+                    class="bg-primary text-on-primary px-6 py-3 rounded-full hover:opacity-90 transition whitespace-nowrap">
+                    View Warranty
+                </button>
+            </div>
+        </section>
+
+        <div id="modalGarantia" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-6">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto relative">
+
+                <button onclick="cerrarGarantia()"
+                    class="absolute top-5 right-5 bg-white shadow-md border border-gray-200 rounded-full w-11 h-11 flex items-center justify-center hover:bg-gray-100 transition duration-200">
+                    <span
+                        class="absolute top-4 right-4 z-50 bg-white shadow-lg border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100">
+                        ✕
+                    </span>
+                </button>
+
+                <img src="../img/garantia-en.jpg" class="w-full" alt="Costumbres Warranty">
+
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-20 pb-10 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-16">
+            <div class="col-span-1 space-y-6">
+                <span class="font-headline-md text-headline-md text-primary font-bold">Costumbres</span>
+                <p class="font-body-md text-body-md text-on-surface-variant pr-8">Certified jewelry and Colombian
+                    handcrafts, made by hand, with the soul of our people.</p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-on-surface mb-6">EXPLORE</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="categorias.html">Categories</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="historia.html">History</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="contacto.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-label-md text-on-surface mb-6">FOLLOW US</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="https://www.instagram.com/costumbres.co/">Instagram</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="#">Facebook</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <div>
+                <img class="w-64 h-auto" src="../img/logos/logo.png" alt="Costumbres Jewelry & Handcrafts logo" />
+            </div>
+        </div>
+        <div class="px-margin-desktop max-w-container-max mx-auto pt-10 border-t border-outline-variant/10 text-center">
+            <p class="font-label-md text-label-md text-on-secondary-container opacity-80 italic">© 2026 Costumbres
+                Jewelry & Handcrafts.</p>
+        </div>
+    </footer>
+    <script src="../js/contacto.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

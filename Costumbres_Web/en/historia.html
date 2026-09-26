@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Story - Costumbres Jewelry & Handcrafts</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&family=Bricolage+Grotesque:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/historia.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden organic-texture">
+    <!-- TopNavBar -->
+    <nav
+        class="site-nav fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 transition-shadow duration-300">
+        <div
+            class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer transition-transform active:scale-95">
+                <img alt="Costumbres Logo" class="h-12 w-auto object-contain" src="../img/logos/icono.png" />
+                <span
+                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="index.html">Shop</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="categorias.html">Categories</a>
+                <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1"
+                    href="historia.html">Our Story</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="contacto.html">Contact</a>
+                <span class="flex items-center gap-2 border-l border-outline-variant/40 pl-6">
+                    <a href="../historia.html" title="Español" class="opacity-50 hover:opacity-100 transition-opacity">
+                        <img src="https://flagcdn.com/24x18/co.png" alt="ES" class="rounded-sm shadow-sm" />
+                    </a>
+                    <a href="historia.html" title="English">
+                        <img src="https://flagcdn.com/24x18/us.png" alt="EN" class="rounded-sm shadow-sm" />
+                    </a>
+                </span>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 rounded-full hover:bg-surface-container-low transition-colors"
+                aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden flex-col bg-surface border-t border-outline-variant/30 px-margin-mobile py-4 gap-1">
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="index.html">Shop</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant"
+                href="categorias.html">Categories</a>
+            <a class="block py-3 font-label-md text-label-md text-primary font-bold" href="historia.html">Our Story</a>
+            <a class="block py-3 font-label-md text-label-md text-on-surface-variant" href="contacto.html">Contact</a>
+            <div
+                class="flex items-center gap-2 pt-3 mt-2 border-t border-outline-variant/20 text-label-md font-label-md">
+                <a class="text-on-surface-variant" href="../historia.html">Español</a>
+                <span class="text-on-surface-variant/40">|</span>
+                <a class="text-primary font-bold" href="historia.html">English</a>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section: Editorial Style -->
+        <section class="relative h-[65vh] min-h-[500px] flex items-center px-margin-mobile md:px-margin-desktop py-12 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="../img/hero/hero-historia.jpg"
+                    alt="Ilustration of Colombian handcrafts, ancestral weaves and fibers"
+                    class="w-full h-full object-cover object-center contrast-110 saturate-110 brightness-105" />
+                <div class="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.7)_0%,_transparent_70%)]"></div>
+            </div>
+
+            <div class="relative z-10 max-w-3xl mx-auto text-center">
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight mb-6 drop-shadow-sm">
+                    Weaving the soul of Colombia
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto text-balance">
+                    More than objects, we build bridges between ancestral heritage and contemporary design. Every
+                    piece tells a story of resilience, wise hands, and the land that sustains us.
+                </p>
+            </div>
+        </section>
+        <!-- The Process: Asymmetric Grid -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 space-y-8 order-2 md:order-1">
+                    <div class="space-y-4">
+                        <h3 class="font-headline-lg text-headline-lg text-primary">The Rhythm of the Land</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Every piece is woven or forged by hand, thread by thread, drop of silver by drop of
+                            silver. We don't work at scale: the pace of creation is set by the detail, not by
+                            haste.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 py-2">
+                        <div class="w-12 h-0.5 bg-primary shrink-0"></div>
+                        <p class="font-headline-md text-headline-md text-on-surface-variant italic">
+                            "Art that isn't rushed, endures."
+                        </p>
+                    </div>
+                    <div
+                        class="p-8 bg-surface-container-low rounded-xl border border-primary/10 relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <span class="material-symbols-outlined text-primary mb-4 text-4xl">eco</span>
+                            <h4 class="font-headline-md text-headline-md mb-2">Ancestral Sustainability</h4>
+                            <p class="text-on-surface-variant">Techniques that have endured for centuries, not by
+                                chance, but out of deep respect for ecological balance.</p>
+                        </div>
+                        <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <span class="material-symbols-outlined text-9xl">energy_savings_leaf</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div>
+                            <p class="font-display-lg text-headline-lg text-primary">+15</p>
+                            <p class="text-on-surface-variant font-body-md">Artisan communities</p>
+                        </div>
+                        <div>
+                            <p class="font-display-lg text-headline-lg text-primary">100%</p>
+                            <p class="text-on-surface-variant font-body-md">Handmade</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2 relative">
+                    <div class="aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden shadow-sm">
+                        <img class="w-full h-full object-cover"
+                            alt="Decorative handcrafted art made by hand"
+                            src="../img/artesanias/f137.jpg" />
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 hidden md:block animate-float">
+                        <img class="w-full h-full object-cover rounded-full border-8 border-background shadow-lg"
+                            alt="Handcrafted board games" src="../img/artesanias/f117.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- What We Make -->
+        <section class="py-20 bg-surface-container-high/30">
+            <div class="px-margin-mobile md:px-margin-desktop text-center mb-16">
+                <h3 class="font-headline-lg text-headline-lg text-primary mb-4">What We Weave and Forge</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Four families of
+                    products, all handmade, all with the same care.</p>
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div
+                    class="relative rounded-3xl overflow-hidden bg-surface-container flex items-center justify-center p-8">
+                    <!-- Categories -->
+                    <div class="relative z-10 w-full grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div
+                            class="flex flex-col items-center justify-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-all cursor-pointer group">
+                            <span class="font-headline-md text-headline-md text-primary">Beadwork</span>
+                            <span
+                                class="text-label-md font-label-md text-on-surface-variant group-hover:text-primary transition-colors">Necklaces
+                                & Earrings</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-all cursor-pointer group">
+                            <span class="font-headline-md text-headline-md text-primary">Fiber Weaving</span>
+                            <span
+                                class="text-label-md font-label-md text-on-surface-variant group-hover:text-primary transition-colors">Bracelets
+                                & Basketry</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-all cursor-pointer group">
+                            <span class="font-headline-md text-headline-md text-primary">Jewelry</span>
+                            <span
+                                class="text-label-md font-label-md text-on-surface-variant group-hover:text-primary transition-colors">Certified
+                                Silver</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center justify-center space-y-2 p-6 bg-white/60 backdrop-blur-md rounded-xl border border-white/60 hover:bg-white/90 transition-all cursor-pointer group">
+                            <span class="font-headline-md text-headline-md text-primary">Decorative Art</span>
+                            <span
+                                class="text-label-md font-label-md text-on-surface-variant group-hover:text-primary transition-colors">For
+                                the Home</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Store: real showroom photos -->
+        <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Visit Our Store</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">In the heart of
+                    Bogotá's historic center, every display case tells a different story.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Jewelry and handcraft display case at the Costumbres store" 
+                        src="../img/local/f02.jpg" />
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Bags, hats and handcrafts displayed at the store entrance" 
+                        src="../img/local/f04.jpg" />
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-[4/5] group">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Colonial facade of the Casona del Museo in Bogotá's historic center"
+                        src="../img/local/f03.jpg" />
+                </div>
+            </div>
+        </section>
+        <!-- Quote Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="material-symbols-outlined text-primary text-6xl opacity-20 mb-8"
+                    style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                <blockquote class="font-headline-lg text-headline-lg italic text-on-surface leading-tight mb-8">
+                    "When we weave, we don't just cross threads. We cross thoughts, prayers, and the memory of our
+                    grandparents, so they are never lost to time."
+                </blockquote>
+                <cite class="font-label-md text-label-md text-primary block">— The Costumbres Team</cite>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-20 pb-10 mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-16">
+                <div class="col-span-1 space-y-6">
+                    <span class="font-headline-md text-headline-md text-primary font-bold">Costumbres</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant pr-8">Certified jewelry and Colombian
+                        handcrafts, made by hand, with the soul of our people.</p>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-on-surface mb-6">EXPLORE</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="categorias.html">Categories</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="historia.html">History</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="contacto.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-on-surface mb-6">FOLLOW US</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="https://www.instagram.com/costumbres.co/">Instagram</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="#">Facebook</a></li>
+                        <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                                href="#">TikTok</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="w-64 h-auto" src="../img/logos/logo.png" alt="Costumbres Jewelry & Handcrafts logo" />
+                </div>
+            </div>
+            <div
+                class="px-margin-desktop max-w-container-max mx-auto pt-10 border-t border-outline-variant/10 text-center">
+                <p class="font-label-md text-label-md text-on-secondary-container opacity-80 italic">© 2026 Costumbres
+                    Jewelry & Handcrafts.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../js/historia.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.weaving-divider {
+    height: 2px;
+    background-image: linear-gradient(to right, #9a4028 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+}
