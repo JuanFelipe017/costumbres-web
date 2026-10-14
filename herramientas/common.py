@@ -186,7 +186,7 @@ def nav(lang, P, page, alt_href, L="", here_href=None):
         <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
             <a href="{L}index.html" aria-label="{t["home_label"]}" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
-                <img alt="" class="h-14 md:h-16 w-auto" src="{P}img/logos/tortuga-nav.png" width="119" height="64" />
+                <img alt="" class="h-12 md:h-14 w-auto" src="{P}img/logos/tortuga-nav.png" width="104" height="56" />
                 <span
                     class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
             </a>
@@ -246,7 +246,7 @@ def footer(lang, P, scripts, L=""):
 {legal}
                 </ul>
             </div>
-            <div class="col-span-2 md:col-span-3 flex justify-center md:justify-end items-start">
+            <div class="col-span-2 md:col-span-3 flex justify-center items-center md:self-center">
                 <img class="w-60 md:w-64 h-auto" src="{P}img/logos/logo-tortuga.png" width="280" height="167" {LAZY}
                     alt="{t["logo_alt"]}" />
             </div>
