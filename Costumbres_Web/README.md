@@ -17,8 +17,8 @@ Buscar y reemplazar en **todas** las páginas (ES y EN):
 | Qué | Texto a buscar | Dónde aparece |
 |---|---|---|
 | Número de WhatsApp | `573000000000` | Botones, tarjetas de productos, páginas legales |
-| Razón social | `[RAZÓN SOCIAL]` / `[LEGAL BUSINESS NAME]` | Footer, privacidad, términos |
-| NIT | `[000.000.000-0]` | Footer, privacidad, términos |
+| Razón social | `[RAZÓN SOCIAL]` / `[LEGAL BUSINESS NAME]` | Privacidad, términos |
+| NIT | `[000.000.000-0]` | Privacidad, términos |
 | Dirección | `Calle 16 # 5-24, Local 11` | Inicio, contacto, footer, legales (confirmar que sea la real) |
 | Horario | `10:00` | Inicio, contacto (confirmar horario real) |
 | Facebook / TikTok | comentario `PENDIENTE` en el footer | Footer |
@@ -40,5 +40,5 @@ privacidad.html  terminos.html                              política de datos/c
 en/                                                          las mismas 7 páginas en inglés
 css/   base.css (compartido), animaciones.css (todo el movimiento), visor.css + uno por página
 js/    tailwind-config.js (tokens), animaciones.js, nav.js, carrusel.js, visor.js, mapa.js, contacto.js
-img/   hero, artesanias, joyas, local, logos (icono-96/192 y logo-320 son copias livianas)
+img/   hero, artesanias, joyas, local, logos (tortuga-nav, tortuga-96/192 y logo-tortuga son la tortuga en verde, sacadas de logo-tortuga-original.png)
 ```

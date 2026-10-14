@@ -128,8 +128,8 @@ def head(lang, P, title, desc, css):
     <meta property="og:description" content="{desc}" />
     <meta property="og:locale" content="{t["og_locale"]}" />
     <!-- Al publicar en Cloudflare: agregar og:image, <link rel="canonical"> y <link rel="alternate" hreflang> con la URL absoluta del dominio -->
-    <link rel="icon" type="image/png" href="{P}img/logos/icono-96.png" />
-    <link rel="apple-touch-icon" href="{P}img/logos/icono-192.png" />
+    <link rel="icon" type="image/png" href="{P}img/logos/tortuga-96.png" />
+    <link rel="apple-touch-icon" href="{P}img/logos/tortuga-192.png" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -186,7 +186,7 @@ def nav(lang, P, page, alt_href, L="", here_href=None):
         <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
             <a href="{L}index.html" aria-label="{t["home_label"]}" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
-                <img alt="" class="h-12 w-12 object-contain" src="{P}img/logos/icono-96.png" width="48" height="48" />
+                <img alt="" class="h-14 md:h-16 w-auto" src="{P}img/logos/tortuga-nav.png" width="119" height="64" />
                 <span
                     class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
             </a>
@@ -222,39 +222,38 @@ def footer(lang, P, scripts, L=""):
     sc = "\n".join(f'    <script src="{P}js/{s}.js"></script>' for s in scripts)
     return f'''    <!-- Footer -->
     <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-16 pb-24 md:pb-10 mt-12">
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-x-gutter gap-y-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
-            <div class="col-span-2 md:col-span-1 space-y-4">
+        <div class="grid grid-cols-2 md:grid-cols-12 gap-x-gutter gap-y-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+            <div class="col-span-2 md:col-span-3 space-y-4">
                 <p class="font-headline-md text-headline-md text-on-primary-fixed-variant font-bold">Costumbres</p>
                 <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">{t["foot_desc"]}</p>
             </div>
-            <div>
+            <div class="md:col-span-2">
                 <h2 class="font-label-md text-label-md text-on-surface mb-4">{t["explore"]}</h2>
                 <ul class="space-y-2">
 {explore}
                 </ul>
             </div>
-            <div>
+            <div class="md:col-span-2">
                 <h2 class="font-label-md text-label-md text-on-surface mb-4">{t["social"]}</h2>
                 <ul class="space-y-2">
                     <li><a class="{LINK}" href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></li>
                     <!-- PENDIENTE: agregar Facebook y TikTok cuando tengan URL real -->
                 </ul>
             </div>
-            <div>
+            <div class="md:col-span-2">
                 <h2 class="font-label-md text-label-md text-on-surface mb-4">{t["legal"]}</h2>
                 <ul class="space-y-2">
 {legal}
                 </ul>
             </div>
-            <div class="flex md:justify-end items-start">
-                <img class="w-40 h-auto" src="{P}img/logos/logo-320.png" width="160" height="160" {LAZY}
+            <div class="col-span-2 md:col-span-3 flex justify-center md:justify-end items-start">
+                <img class="w-60 md:w-64 h-auto" src="{P}img/logos/logo-tortuga.png" width="280" height="167" {LAZY}
                     alt="{t["logo_alt"]}" />
             </div>
         </div>
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-outline-variant/30 text-center space-y-3">
-            <!-- PENDIENTE: razón social y NIT reales (Ley 1480 de 2011, art. 23) -->
             <p class="font-body-md text-label-md text-on-surface-variant">
-                {d["legal_name"]} · {d["nit"]} · {d["address"]}, {d["city"]} ·
+                {d["address"]}, {d["city"]} ·
                 <a class="underline underline-offset-4 hover:text-on-primary-fixed-variant" href="mailto:{EMAIL}">{EMAIL}</a>
             </p>
             <p class="font-body-md text-label-md text-on-surface-variant max-w-2xl mx-auto">{t["sic"]}</p>
