@@ -1,2 +1,13 @@
+# Python
 __pycache__/
 *.pyc
+
+# Herramientas de IA locales 
+.claude/
+CLAUDE.md
+PROMPTS.md
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
