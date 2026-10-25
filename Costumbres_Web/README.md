@@ -16,7 +16,6 @@ Buscar y reemplazar en **todas** las páginas (ES y EN):
 
 | Qué | Texto a buscar | Dónde aparece |
 |---|---|---|
-| Número de WhatsApp | `573000000000` | Botones, tarjetas de productos, páginas legales |
 | Razón social | `[RAZÓN SOCIAL]` / `[LEGAL BUSINESS NAME]` | Privacidad, términos |
 | NIT | `[000.000.000-0]` | Privacidad, términos |
 | Dirección | `Calle 16 # 5-24, Local 11` | Inicio, contacto, footer, legales (confirmar que sea la real) |

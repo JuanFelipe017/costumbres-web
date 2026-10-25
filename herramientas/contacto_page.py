@@ -6,7 +6,7 @@ S = {
         "desc": "Escríbenos por WhatsApp o correo, visita nuestra tienda en el centro histórico de Bogotá y consulta las preguntas frecuentes y la garantía de nuestros productos.",
         "h1": "Conectemos",
         "lead": "Estamos aquí para ayudarte. Si deseas conocer más sobre nuestras artesanías, resolver una duda o planear tu visita, será un gusto atenderte.",
-        "wa_msg": "Hola, Costumbres. Tengo una consulta.",
+        "wa_msg": "¡Hola, Costumbres! Tengo una pregunta: ",
         "wa_sub": "Lunes a sábado, 10 a. m. – 7 p. m.",
         "mail": "Correo",
         "hours_h": "Horarios de atención",
@@ -15,6 +15,8 @@ S = {
         "faq": [
             ("¿Cómo puedo comprar?",
              "Escríbenos por WhatsApp con la pieza que te interesa. Antes de que pagues te confirmamos disponibilidad, precio total en pesos colombianos y las opciones de pago y entrega. También puedes comprar directamente en nuestra tienda."),
+            ("¿Realizan envíos?",
+             f'Sí. Escríbenos por <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="{wa("¡Hola, Costumbres! Quisiera información sobre envíos.")}" target="_blank" rel="noopener">WhatsApp</a> o <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a> y coordinamos el envío. Dentro de Bogotá el envío es <strong>gratis</strong>; fuera de Bogotá tiene un costo adicional que te confirmamos antes de que pagues.'),
             ("¿Todas las artesanías son hechas a mano?",
              "Sí. Todas nuestras piezas son elaboradas por artesanos colombianos utilizando técnicas tradicionales transmitidas de generación en generación."),
             ("¿Cómo debo cuidar mi artesanía?",
@@ -45,7 +47,7 @@ S = {
         "desc": "Message us on WhatsApp or by email, visit our store in Bogotá's historic center, and read our FAQ and product warranty.",
         "h1": "Let's Connect",
         "lead": "Every piece in our collection tells a story. Have questions about an ancestral technique or a special order? Message us directly.",
-        "wa_msg": "Hi Costumbres, I have a question.",
+        "wa_msg": "Hi Costumbres! I have a question: ",
         "wa_sub": "Monday to Saturday, 10 AM – 7 PM",
         "mail": "Email",
         "hours_h": "Store Hours",
@@ -54,6 +56,8 @@ S = {
         "faq": [
             ("How can I buy?",
              "Message us on WhatsApp with the piece you're interested in. Before you pay, we confirm availability, the total price in Colombian pesos, and the payment and delivery options. You can also buy directly at our store."),
+            ("Do you ship?",
+             f'Yes. Message us on <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="{wa("Hi Costumbres! I would like information about shipping.")}" target="_blank" rel="noopener">WhatsApp</a> or <a class="underline underline-offset-4 text-on-primary-fixed-variant" href="{INSTAGRAM}" target="_blank" rel="noopener">Instagram</a> and we will arrange it. Shipping within Bogotá is <strong>free</strong>; outside Bogotá there is an additional cost, which we confirm before you pay.'),
             ("Are all the handicrafts handmade?",
              "Yes. Every piece is handcrafted by Colombian artisans using traditional techniques passed down from generation to generation."),
             ("How should I care for my handicraft?",
@@ -110,6 +114,7 @@ def body(lang, P):
                             {icon("chat", "text-4xl")}
                             <div>
                                 <p class="font-headline-md text-headline-md">WhatsApp</p>
+                                <p class="text-label-md font-label-md">{WA_DISPLAY}</p>
                                 <p class="text-label-md font-label-md">{s["wa_sub"]}</p>
                             </div>
                         </a>

@@ -12,8 +12,8 @@ S = {
         "cat_h": "Catálogo de Tesoros",
         "cat_p": "Una selección curada de piezas maestras, desde las orillas del río Sinú hasta las montañas de la Sierra Nevada.",
         "cat_all": "Ver todas las colecciones",
-        "ask": "Consultar precio por WhatsApp",
-        "wa_msg": "Hola, Costumbres. Quiero consultar el precio de: ",
+        "ask": "Consultar precio y disponibilidad",
+        "wa_msg": "¡Hola, Costumbres! Vi en su página «{}» y quisiera saber el precio y si está disponible.",
         "items": [
             ("Réplicas Precolombinas", "Orfebrería", "Réplicas en orfebrería, hechas a mano",
              "Réplicas artesanales de figuras antropomorfas de orfebrería precolombina", "Réplica artesanal"),
@@ -29,8 +29,8 @@ S = {
         "visit_eyebrow": "Nuestra casa",
         "visit_h": "Visítanos en el Centro Histórico",
         "visit_p": "Ven a sentir las texturas y conocer las historias detrás de cada pieza en nuestro espacio showroom en Bogotá.",
-        "chat": "Chatea con nosotros",
-        "chat_msg": "Hola, Costumbres. Quiero más información sobre sus piezas.",
+        "chat": "Escríbenos por WhatsApp",
+        "chat_msg": "¡Hola, Costumbres! Quisiera más información sobre sus piezas y la tienda.",
     },
     "en": {
         "title": "Costumbres | Colombian Jewelry & Handcrafts in Bogotá",
@@ -43,8 +43,8 @@ S = {
         "cat_h": "Catalog of Treasures",
         "cat_p": "A curated selection of master pieces, handmade with care from silver, fiber, and beadwork.",
         "cat_all": "View all collections",
-        "ask": "Ask for the price on WhatsApp",
-        "wa_msg": "Hi Costumbres, I'd like to ask about the price of: ",
+        "ask": "Ask about price & availability",
+        "wa_msg": "Hi Costumbres! I saw \u201c{}\u201d on your website and would like to know the price and availability.",
         "items": [
             ("Pre-Columbian Replicas", "Metalwork", "Handmade metalwork replicas",
              "Handcrafted replicas of pre-Columbian anthropomorphic goldwork figures", "Handcrafted replica"),
@@ -60,8 +60,8 @@ S = {
         "visit_eyebrow": "Our home",
         "visit_h": "Visit Us in the Historic Center",
         "visit_p": "Come feel the textures and discover the stories behind every piece in our showroom in Bogotá.",
-        "chat": "Chat with us",
-        "chat_msg": "Hi Costumbres, I'd like more information about your pieces.",
+        "chat": "Message us on WhatsApp",
+        "chat_msg": "Hi Costumbres! I'd like more information about your pieces and the store.",
     },
 }
 
@@ -86,7 +86,7 @@ def card(lang, P, i):
                         <div class="absolute top-6 left-6">
                             <span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-label-md">{badge}</span>
                         </div>'''
-    return f'''                <a href="{wa(s["wa_msg"] + name)}" target="_blank" rel="noopener"
+    return f'''                <a href="{wa(s["wa_msg"].format(name))}" target="_blank" rel="noopener"
                     class="{wrap} group block rounded-3xl lift-anim zoom-anim">
                     <div class="relative {frame} overflow-hidden rounded-3xl earth-shadow mb-6">
                         <img class="w-full h-full object-cover"
@@ -98,7 +98,7 @@ def card(lang, P, i):
                         </span>
                         <h3 class="font-headline-md text-headline-md text-on-surface mb-1">{name}</h3>
                         <p class="text-on-surface-variant font-body-md">{sub}</p>
-                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">{s["ask"]}</span>
+                        <span class="mt-3 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">{WA_ICON_SM}{s["ask"]}</span>
                     </div>
                 </a>'''
 

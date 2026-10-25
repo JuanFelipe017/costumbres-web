@@ -13,7 +13,7 @@ def ident(lang):
                         <li><strong>{lab[0]}:</strong> {d["legal_name"]} — {d["nit"]}</li>
                         <li><strong>{lab[1]}:</strong> {d["address"]}, {d["city"]}</li>
                         <li><strong>{lab[2]}:</strong> <a {A} href="mailto:{EMAIL}">{EMAIL}</a></li>
-                        <li><strong>{lab[3]}:</strong> <a {A} href="https://wa.me/{WA_NUMBER}" target="_blank" rel="noopener">+{WA_NUMBER}</a></li>
+                        <li><strong>{lab[3]}:</strong> <a {A} href="https://wa.me/{WA_NUMBER}" target="_blank" rel="noopener">{WA_DISPLAY}</a></li>
                     </ul>'''
 
 
@@ -142,7 +142,7 @@ TERMS = {
                         <li>Te entregamos la pieza con su factura o comprobante de compra.</li>
                     </ol>
                     <p>En los pedidos personalizados acordamos por escrito las características, el precio y el tiempo de entrega.</p>'''),
-            ("entregas", "Entregas", lambda: '<p>Puedes recoger tu compra en la tienda o acordar un envío. El tiempo, el costo y la transportadora se confirman antes del pago. Revisa el paquete al recibirlo e infórmanos cualquier novedad lo antes posible.</p>'),
+            ("entregas", "Entregas", lambda: '<p>Puedes recoger tu compra en la tienda o acordar un envío. Los envíos dentro de Bogotá son gratis; fuera de Bogotá tienen un costo adicional. El tiempo, el costo y la transportadora se confirman antes del pago. Revisa el paquete al recibirlo e infórmanos cualquier novedad lo antes posible.</p>'),
             ("retracto", "Derecho de retracto", lambda: '''<p>Si compraste a distancia (por WhatsApp, correo u otro medio no presencial), puedes retractarte de la compra dentro de los <strong>cinco (5) días hábiles</strong> siguientes a la entrega del producto (Ley 1480 de 2011, art. 47). Para hacerlo, escríbenos dentro de ese plazo y devuelve la pieza en el mismo estado en que la recibiste. Los costos de transporte de la devolución corren por tu cuenta. Te reintegramos el dinero dentro de los treinta (30) días calendario siguientes, sin descuentos ni retenciones.</p>
                     <p>El retracto no aplica, entre otros casos previstos en la ley, a piezas elaboradas según tus especificaciones o claramente personalizadas, ni a bienes de uso personal. En las compras presenciales en la tienda, los cambios se rigen por la garantía y por lo que acordemos al momento de la compra.</p>'''),
             ("reversion", "Reversión del pago", lambda: '<p>Si en una venta a distancia pagaste con tarjeta de crédito, débito u otro medio de pago electrónico, puedes solicitar la reversión del pago en los casos previstos en la ley: fraude, operación no solicitada, producto no recibido, o producto que no corresponde a lo pedido o es defectuoso (Ley 1480 de 2011, art. 51). Debes presentar la queja ante nosotros y avisar al emisor del medio de pago dentro de los cinco (5) días hábiles siguientes a la fecha en que conociste la situación, y devolver el producto si lo recibiste.</p>'),
@@ -175,7 +175,7 @@ TERMS = {
                         <li>We deliver the piece with its invoice or proof of purchase.</li>
                     </ol>
                     <p>For custom orders, we agree in writing on the features, price and delivery time.</p>'''),
-            ("entregas", "Deliveries", lambda: '<p>You can pick up your purchase at the store or arrange shipping. Delivery time, cost and carrier are confirmed before payment. Please check the package on arrival and let us know about any issue as soon as possible.</p>'),
+            ("entregas", "Deliveries", lambda: '<p>You can pick up your purchase at the store or arrange shipping. Shipping within Bogotá is free; outside Bogotá there is an additional cost. Delivery time, cost and carrier are confirmed before payment. Please check the package on arrival and let us know about any issue as soon as possible.</p>'),
             ("retracto", "Right of withdrawal", lambda: '''<p>If you bought remotely (via WhatsApp, email or another non-in-person channel), you may withdraw from the purchase within <strong>five (5) business days</strong> after delivery (Law 1480 of 2011, art. 47). To do so, contact us within that period and return the piece in the same condition you received it. Return shipping costs are paid by you. We refund the money within thirty (30) calendar days, with no deductions.</p>
                     <p>Withdrawal does not apply, among other cases set by law, to pieces made to your specifications or clearly personalized, or to goods for personal use. For in-store purchases, exchanges are governed by the warranty and by what we agree at the time of purchase.</p>'''),
             ("reversion", "Payment reversal", lambda: '<p>If you paid for a remote purchase by credit card, debit card or another electronic payment method, you may request a payment reversal in the cases set by law: fraud, an unrequested transaction, a product not received, or a product that does not match your order or is defective (Law 1480 of 2011, art. 51). You must file the complaint with us and notify the payment issuer within five (5) business days of learning of the situation, and return the product if you received it.</p>'),

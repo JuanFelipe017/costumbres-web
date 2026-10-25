@@ -11,7 +11,7 @@ S = {
         "cats": "Ver categorías",
         "wa_pre": "¿Buscabas una pieza en especial?",
         "wa_link": "Escríbenos por WhatsApp",
-        "wa_msg": "Hola, Costumbres. Estaba buscando algo en su página y no lo encontré.",
+        "wa_msg": "¡Hola, Costumbres! Estaba buscando algo en su página y no lo encontré. ¿Me pueden ayudar?",
     },
     "en": {
         "title": "Page not found | Costumbres",
@@ -23,7 +23,7 @@ S = {
         "cats": "See categories",
         "wa_pre": "Looking for a specific piece?",
         "wa_link": "Message us on WhatsApp",
-        "wa_msg": "Hi Costumbres, I was looking for something on your website and couldn't find it.",
+        "wa_msg": "Hi Costumbres! I was looking for something on your website and couldn't find it. Can you help me?",
     },
 }
 

@@ -7,8 +7,8 @@ S = {
         "desc": "Chaquira, tejido en fibra, joyería y arte decorativo. Conoce las técnicas y comunidades detrás de cada pieza: tamo, werregue, sombrero vueltiao, Guacamayas, mola, mochila wayúu y collar emberá.",
         "h1": "Nuestras Tradiciones",
         "lead": "Descubre el alma de Colombia a través de sus técnicas ancestrales. Cada pieza cuenta la historia de un territorio, una familia y un legado que perdura.",
-        "see": "Ver piezas por WhatsApp",
-        "wa_msg": "Hola, Costumbres. Quiero ver piezas de: ",
+        "see": "Ver piezas disponibles",
+        "wa_msg": "¡Hola, Costumbres! Me interesan sus piezas de «{}». ¿Qué tienen disponible?",
         "bento": [
             ("chaquira", "Chaquira", "Hecho a mano",
              "Collares, aretes y pulseras tejidos hilo a hilo en mostacilla, con patrones geométricos de colores que le dan identidad a cada pieza.",
@@ -52,8 +52,8 @@ S = {
         "desc": "Beadwork, fiber weaving, jewelry and decorative art. Discover the techniques and communities behind every piece: tamo, werregue, sombrero vueltiao, Guacamayas, mola, Wayúu bags and Emberá necklaces.",
         "h1": "Our Traditions",
         "lead": "Discover the soul of Colombia through its ancestral techniques. Every piece tells the story of a territory, a family, and a legacy that endures.",
-        "see": "See pieces on WhatsApp",
-        "wa_msg": "Hi Costumbres, I'd like to see pieces of: ",
+        "see": "See available pieces",
+        "wa_msg": "Hi Costumbres! I'm interested in your \u201c{}\u201d pieces. What do you have available?",
         "bento": [
             ("chaquira", "Beadwork", "Handmade",
              "Necklaces, earrings and bracelets woven thread by thread in glass beads, with colorful geometric patterns that give each piece its own identity.",
@@ -113,9 +113,9 @@ IMG = "w-full h-full object-cover"
 def bento(lang, P, i):
     s = S[lang]
     bid, name, eyebrow, text, alt = s["bento"][i]
-    href = wa(s["wa_msg"] + name)
+    href = wa(s["wa_msg"].format(name))
     eb = f'\n                        <span class="font-label-md text-label-md text-on-tertiary-fixed-variant mb-2">{eyebrow}</span>' if eyebrow else ""
-    see = f'<span class="mt-auto pt-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">{s["see"]}</span>'
+    see = f'<span class="mt-auto pt-2 inline-flex items-center gap-2 font-label-md text-label-md text-on-primary-fixed-variant group-hover:underline underline-offset-4">{WA_ICON_SM}{s["see"]}</span>'
     img = f'<img class="{IMG}" alt="{alt}" src="{P}img/{BENTO_IMG[i]}" {LAZY} />'
     if i in (0, 3):  # tarjetas anchas con imagen a un lado
         direction = "md:flex-row" if i == 0 else "md:flex-row-reverse"
