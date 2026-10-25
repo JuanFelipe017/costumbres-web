@@ -17,16 +17,16 @@ D = {
         "city": "Centro Histórico, Bogotá, Colombia",
         "days": "Lunes a sábado",
         "hours": "10:00 a. m. – 7:00 p. m.",
-        "legal_name": "[RAZÓN SOCIAL]",
-        "nit": "NIT [000.000.000-0]",
+        "legal_name": "Colores de mi Pueblo S.A.S.",
+        "nit": "NIT 900.808.931-6",
     },
     "en": {
         "address": "Calle 16 # 5-24, Local 11",
         "city": "Historic Center, Bogotá, Colombia",
         "days": "Monday to Saturday",
         "hours": "10:00 AM – 7:00 PM",
-        "legal_name": "[LEGAL BUSINESS NAME]",
-        "nit": "Tax ID (NIT) [000.000.000-0]",
+        "legal_name": "Colores de mi Pueblo S.A.S.",
+        "nit": "Tax ID (NIT) 900.808.931-6",
     },
 }
 
