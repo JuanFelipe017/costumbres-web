@@ -7,24 +7,26 @@ WA_NUMBER = "573202776799"
 WA_DISPLAY = "+57 320 277 6799"
 EMAIL = "costumbres.co@hotmail.com"
 INSTAGRAM = "https://www.instagram.com/costumbres.co/"
-MAP_QUERY = "Calle 16 #5-24 Local 11, Bogotá, Colombia"
+MAP_QUERY = "Centro Comercial La Casona del Museo, Calle 16 #5-24, Bogotá, Colombia"
 MAP_EMBED = "https://www.google.com/maps?q=" + quote_plus(MAP_QUERY) + "&amp;output=embed"
 MAP_OPEN = "https://www.google.com/maps/search/?api=1&amp;query=" + quote_plus(MAP_QUERY)
 
 D = {
     "es": {
-        "address": "Calle 16 # 5-24, Local 11",
-        "city": "Centro Histórico, Bogotá, Colombia",
-        "days": "Lunes a sábado",
-        "hours": "10:00 a. m. – 7:00 p. m.",
+        "address": "Centro Comercial La Casona del Museo, Locales 11 y 13",
+        "city": "Calle 16 # 5-24, Centro Histórico, Bogotá, Colombia",
+        "hours": [("Lunes a sábado", "9:00 a. m. – 6:00 p. m."),
+                  ("Domingos y festivos", "10:00 a. m. – 5:00 p. m.")],
+        "hours_note": "Horario continuo",
         "legal_name": "Colores de mi Pueblo S.A.S.",
         "nit": "NIT 900.808.931-6",
     },
     "en": {
-        "address": "Calle 16 # 5-24, Local 11",
-        "city": "Historic Center, Bogotá, Colombia",
-        "days": "Monday to Saturday",
-        "hours": "10:00 AM – 7:00 PM",
+        "address": "La Casona del Museo Shopping Center, Stores 11 and 13",
+        "city": "Calle 16 # 5-24, Historic Center, Bogotá, Colombia",
+        "hours": [("Monday to Saturday", "9:00 AM – 6:00 PM"),
+                  ("Sundays and holidays", "10:00 AM – 5:00 PM")],
+        "hours_note": "Open straight through, no midday closing",
         "legal_name": "Colores de mi Pueblo S.A.S.",
         "nit": "Tax ID (NIT) 900.808.931-6",
     },
@@ -191,7 +193,7 @@ def nav(lang, P, page, alt_href, L="", here_href=None):
             <a href="{L}index.html" aria-label="{t["home_label"]}" class="rounded-lg transition-transform active:scale-95 flex items-center gap-3">
                 <img alt="" class="h-12 md:h-14 w-auto" src="{P}img/logos/tortuga-nav.png" width="104" height="56" />
                 <span
-                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:inline">Costumbres</span>
+                    class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Costumbres</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
 {nl.join(desk)}

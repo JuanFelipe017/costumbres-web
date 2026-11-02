@@ -7,7 +7,7 @@ S = {
         "h1": "Conectemos",
         "lead": "Estamos aquí para ayudarte. Si deseas conocer más sobre nuestras artesanías, resolver una duda o planear tu visita, será un gusto atenderte.",
         "wa_msg": "¡Hola, Costumbres! Tengo una pregunta: ",
-        "wa_sub": "Lunes a sábado, 10 a. m. – 7 p. m.",
+        "wa_sub": "Todos los días, en horario de la tienda",
         "mail": "Correo",
         "hours_h": "Horarios de atención",
         "faq_h": "Preguntas Frecuentes",
@@ -48,7 +48,7 @@ S = {
         "h1": "Let's Connect",
         "lead": "Every piece in our collection tells a story. Have questions about an ancestral technique or a special order? Message us directly.",
         "wa_msg": "Hi Costumbres! I have a question: ",
-        "wa_sub": "Monday to Saturday, 10 AM – 7 PM",
+        "wa_sub": "Every day, during store hours",
         "mail": "Email",
         "hours_h": "Store Hours",
         "faq_h": "Frequently Asked Questions",
@@ -146,7 +146,8 @@ def body(lang, P):
                             {icon("schedule", "text-primary")}
                             <div>
                                 <p class="font-label-md text-label-md text-on-surface">{s["hours_h"]}</p>
-                                <p class="text-on-surface-variant">{d["days"]}: {d["hours"]}</p>
+{"".join(f"""                                <p class="text-on-surface-variant">{days}: {hours}</p>
+""" for days, hours in d["hours"])}                                <p class="text-on-surface-variant">{d["hours_note"]}</p>
                             </div>
                         </div>
                     </div>

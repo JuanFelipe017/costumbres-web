@@ -16,8 +16,6 @@ Buscar y reemplazar en **todas** las páginas (ES y EN):
 
 | Qué | Texto a buscar | Dónde aparece |
 |---|---|---|
-| Dirección | `Calle 16 # 5-24, Local 11` | Inicio, contacto, footer, legales (confirmar que sea la real) |
-| Horario | `10:00` | Inicio, contacto (confirmar horario real) |
 | Facebook / TikTok | comentario `PENDIENTE` en el footer | Footer |
 | Dominio | comentario en el `<head>` | Agregar `og:image`, `canonical` y `hreflang` con URL absoluta |
 

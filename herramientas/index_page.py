@@ -171,9 +171,12 @@ def body(lang, P):
                         </div>
                         <div class="flex items-start gap-4">
                             {icon("schedule", "text-primary text-3xl")}
-                            <div>
-                                <p class="font-headline-md text-on-surface">{d["days"]}</p>
-                                <p class="text-on-surface-variant">{d["hours"]}</p>
+                            <div class="space-y-3">
+{"".join(f"""                                <div>
+                                    <p class="font-headline-md text-on-surface">{days}</p>
+                                    <p class="text-on-surface-variant">{hours}</p>
+                                </div>
+""" for days, hours in d["hours"])}                                <p class="font-label-md text-label-md text-on-primary-fixed-variant">{d["hours_note"]}</p>
                             </div>
                         </div>
                     </div>
